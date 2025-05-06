@@ -1,5 +1,5 @@
 import React from 'react';
-import './TestimonialCard.css';
+
 
 function TestimonialCard({ testimonial, isActive, onPrev, onNext }) {
   const { text, author } = testimonial;

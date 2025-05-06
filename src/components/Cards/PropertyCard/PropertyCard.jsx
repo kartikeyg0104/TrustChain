@@ -1,5 +1,5 @@
 import React from 'react';
-import './PropertyCard.css';
+
 
 function PropertyCard({ property }) {
   const { title, price, location, image, badge, details } = property;

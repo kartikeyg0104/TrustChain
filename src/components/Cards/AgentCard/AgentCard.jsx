@@ -1,5 +1,5 @@
 import React from 'react';
-import './AgentCard.css';
+
 
 function AgentCard({ agent }) {
   const { name, initials, title, company, badge, engagement, listings } = agent;
