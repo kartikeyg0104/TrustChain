@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import PropertyCard from '../Cards/PropertyCard/PropertyCard';
 import FeatureCard from '../Cards/FeatureCard/FeatureCard';
 import AgentCard from '../Cards/AgentCard/AgentCard';
@@ -9,6 +10,7 @@ import { trustFeatures } from '../../data/features';
 import { topAgents } from '../../data/agents';
 import { testimonials } from '../../data/testimonials';
 import Promote from '../../assets/Homepics/Promote.png';
+import Promise from '../../assets/Homepics/Promise.jpg';
 import './Home.css';
 
 function Home() {
@@ -28,8 +30,13 @@ function Home() {
 
   return (
     <div className="home">
-      <Navbar />
-      <header className="home-header">
+
+      <header className="home-header" style={{
+        background: `linear-gradient(rgba(26, 43, 80, 0.85), rgba(26, 43, 80, 0.9)), url(${Promise})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'scroll'
+      }}>
         <h1>Building Trust in Real Estate Connections</h1>
         <p>
           TrustChain creates an ecosystem where verified identities, transparent
@@ -131,6 +138,7 @@ function Home() {
           ))}
         </div>
       </section>
+
     </div>
   );
 }
