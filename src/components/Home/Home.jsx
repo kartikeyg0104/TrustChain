@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import PropertyCard from '../Cards/PropertyCard/PropertyCard';
@@ -15,6 +16,9 @@ import './Home.css';
 
 function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [searchType, setSearchType] = useState('properties'); // 'properties' or 'agents'
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const handlePrevious = () => {
     setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
@@ -26,6 +30,32 @@ function Home() {
 
   const goToTestimonial = (index) => {
     setCurrentTestimonial(index);
+  };
+
+  const handleSearchTypeChange = (type) => {
+    setSearchType(type);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    if (searchTerm.trim()) {
+      // Navigate to the appropriate page with search query
+      navigate(`/${searchType}?search=${encodeURIComponent(searchTerm)}`);
+    }
+  };
+
+  const handlePopularSearch = (term) => {
+    setSearchTerm(term);
+    navigate(`/${searchType}?search=${encodeURIComponent(term)}`);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchSubmit();
+    }
   };
 
   return (
@@ -45,21 +75,37 @@ function Home() {
         </p>
         <div className="search-section">
           <div className="search-buttons">
-            <button className="find-properties active">Find Properties</button>
-            <button className="find-agents">Find Agents</button>
+            <button 
+              className={`find-properties ${searchType === 'properties' ? 'active' : ''}`}
+              onClick={() => handleSearchTypeChange('properties')}
+            >
+              Find Properties
+            </button>
+            <button 
+              className={`find-agents ${searchType === 'agents' ? 'active' : ''}`}
+              onClick={() => handleSearchTypeChange('agents')}
+            >
+              Find Agents
+            </button>
           </div>
           <div className="search-bar-container">
             <input
               type="text"
               placeholder="Enter location, zipcode, or address"
               className="search-input"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              onKeyPress={handleKeyPress}
             />
-            <button className="search-button">Search</button>
+            <button className="search-button" onClick={handleSearchSubmit}>Search</button>
           </div>
         </div>
         <p className="popular-searches">
-          Popular searches: <span>New York</span> <span>Los Angeles</span>{' '}
-          <span>Chicago</span> <span>Miami</span>
+          Popular searches: 
+          <span onClick={() => handlePopularSearch('New York')}>New York</span> 
+          <span onClick={() => handlePopularSearch('Los Angeles')}>Los Angeles</span> 
+          <span onClick={() => handlePopularSearch('Chicago')}>Chicago</span> 
+          <span onClick={() => handlePopularSearch('Miami')}>Miami</span>
         </p>
       </header>
 
