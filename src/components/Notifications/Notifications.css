@@ -5,7 +5,6 @@
   background-color: #f8f9fc;
 }
 
-/* Header Styling */
 .notifications-header {
   background-color: #1a2b50;
   color: white;
@@ -29,14 +28,12 @@
   opacity: 0.9;
 }
 
-/* Container Styling */
 .notifications-container {
   max-width: 900px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
-/* Controls Section */
 .notifications-controls {
   display: flex;
   justify-content: space-between;
@@ -145,7 +142,6 @@
   font-weight: 500;
 }
 
-/* Notifications List */
 .notifications-list {
   background: white;
   border-radius: 10px;
@@ -277,7 +273,6 @@
   color: #ef4444;
 }
 
-/* Empty State */
 .no-notifications {
   padding: 50px 20px;
   text-align: center;

@@ -1,25 +1,50 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaPhoneAlt, FaEnvelope, FaStar } from 'react-icons/fa';
+import './AgentCard.css';
 
 
 function AgentCard({ agent }) {
-  const { name, initials, title, company, badge, engagement, listings } = agent;
+  const { id, name, initials, title, company, badge, engagement, listings, rating = 4.8 } = agent;
   
   return (
     <div className="agent-card">
-      <div className="agent-avatar">{initials}</div>
+      <div className="agent-avatar" style={{backgroundColor: agent.bgColor || '#1a2b50'}}>{initials}</div>
+      <span className={`badge ${badge.toLowerCase()}`}>{badge}</span>
       <h3>{name}</h3>
-      <p>{title}</p>
-      <p className={`badge ${badge}`}>{badge}</p>
-      <p>{company}</p>
-      <div className="engagement">
-        <span>{engagement} Engagement</span>
-        <span>{listings} Active listings</span>
+      <p className="agent-title">{title}</p>
+      <p className="agent-company">{company}</p>
+      
+      <div className="agent-stats">
+        <div className="stat">
+          <span className="stat-value">{engagement}</span>
+          <span className="stat-label">Engagement</span>
+        </div>
+        <div className="stat">
+          <span className="stat-value">{listings}</span>
+          <span className="stat-label">Listings</span>
+        </div>
+        <div className="stat">
+          <span className="stat-value">
+            {rating}
+            <FaStar className="rating-star" />
+          </span>
+          <span className="stat-label">Rating</span>
+        </div>
       </div>
+      
       <div className="agent-actions">
-        <button>Message</button>
-        <button>Call</button>
+        <button className="contact-button primary">
+          <FaEnvelope /> Message
+        </button>
+        <button className="contact-button secondary">
+          <FaPhoneAlt /> Call
+        </button>
       </div>
-      <a href="#">View Full Profile</a>
+      
+      <Link to={`/agents/${id}`} className="view-profile-link">
+        View Full Profile
+      </Link>
     </div>
   );
 }

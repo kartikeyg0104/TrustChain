@@ -1,207 +1,190 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { FaSearch, FaFilter, FaTh, FaThList } from 'react-icons/fa';
+import AgentCard from '../Cards/AgentCard/AgentCard';
 import { topAgents } from '../../data/agents';
 import './Agents.css';
 
 function Agents() {
-  // State for agents and filtering
   const [agents, setAgents] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [specialty, setSpecialty] = useState('Any Specialty');
-  const [verificationLevel, setVerificationLevel] = useState('Any Level');
-  const [responseTime, setResponseTime] = useState('Any');
-  const [sortBy, setSortBy] = useState('Engagement Score');
+  const [viewMode, setViewMode] = useState('grid');
+  const [sortBy, setSortBy] = useState('engagement');
+  const [agentCategory, setAgentCategory] = useState('All');
+  const [showFavorites, setShowFavorites] = useState(false);
   
   const location = useLocation();
+  const navigate = useNavigate();
+  const searchQuery = new URLSearchParams(location.search).get('search') || '';
   
-  // Get search query from URL on component mount
   useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const searchQuery = queryParams.get('search');
-    
-    if (searchQuery) {
-      setSearchTerm(searchQuery);
-    }
-  }, [location.search]);
+    setSearchTerm(searchQuery);
+  }, [searchQuery]);
 
-  // Filter agents based on search and filters
   useEffect(() => {
     let filteredAgents = [...topAgents];
     
-    // Apply search term filter
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
       filteredAgents = filteredAgents.filter(agent => 
         agent.name.toLowerCase().includes(term) || 
-        agent.title.toLowerCase().includes(term) ||
-        agent.company.toLowerCase().includes(term)
+        agent.title?.toLowerCase().includes(term) ||
+        agent.company?.toLowerCase().includes(term) ||
+        agent.specialty?.toLowerCase().includes(term)
       );
     }
     
-    // Apply specialty filter
-    if (specialty !== 'Any Specialty') {
+    if (agentCategory !== 'All') {
       filteredAgents = filteredAgents.filter(agent => 
-        agent.specialty === specialty
+        agent.specialty === agentCategory
       );
     }
     
-    // Apply verification filter
-    if (verificationLevel !== 'Any Level') {
-      const level = verificationLevel.toLowerCase();
-      filteredAgents = filteredAgents.filter(agent => 
-        agent.badge.toLowerCase() === level
-      );
-    }
-    
-    // Sort agents
-    if (sortBy === 'Engagement Score') {
+    if (sortBy === 'engagement') {
       filteredAgents.sort((a, b) => b.engagement - a.engagement);
-    } else if (sortBy === 'Most Listings') {
+    } else if (sortBy === 'listings') {
       filteredAgents.sort((a, b) => b.listings - a.listings);
-    } else if (sortBy === 'Name A-Z') {
+    } else if (sortBy === 'name') {
       filteredAgents.sort((a, b) => a.name.localeCompare(b.name));
     }
     
     setAgents(filteredAgents);
-  }, [searchTerm, specialty, verificationLevel, responseTime, sortBy]);
+  }, [searchTerm, agentCategory, sortBy]);
 
-  const handleSearchSubmit = (e) => {
+  const handleCategoryFilter = (category) => {
+    setAgentCategory(category);
+  };
+  
+  const handleSearch = (e) => {
     e.preventDefault();
-    // The filtering happens automatically through the useEffect
+    navigate(`/agents?search=${encodeURIComponent(searchTerm)}`);
   };
 
   return (
     <div className="agents-page">
-      <div className="agents-container">
-        <h1 className="agents-title">Find Verified Agents</h1>
-        
-        {/* Search Bar */}
-        <div className="search-container">
-          <form onSubmit={handleSearchSubmit}>
-            <input 
-              type="text" 
-              placeholder="Search by agent name, specialty, or location"
-              className="search-input"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              aria-label="Search agents"
-            />
+      <div className="agents-hero-header">
+        <div className="hero-content">
+          <h1>Find Your Perfect Agent</h1>
+          <p>Connect with verified real estate professionals who can guide your property journey</p>
+          
+          <form className="agent-search-form" onSubmit={handleSearch}>
+            <div className="search-bar-container">
+              <FaSearch className="search-icon" />
+              <input 
+                type="text" 
+                placeholder="Search by name, specialty, or location"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <button type="submit" className="search-button">Search</button>
+            </div>
           </form>
-        </div>
-        
-        {/* Filters */}
-        <div className="filters-container">
-          <div className="filter-group">
-            <label htmlFor="specialty">Specialty</label>
-            <select 
-              id="specialty"
-              value={specialty} 
-              onChange={(e) => setSpecialty(e.target.value)}
+          
+          <div className="agent-type-filters">
+            <button 
+              className={agentCategory === 'All' ? 'active' : ''}
+              onClick={() => handleCategoryFilter('All')}
             >
-              <option>Any Specialty</option>
-              <option>Residential</option>
-              <option>Commercial</option>
-              <option>Luxury</option>
-              <option>Investment</option>
-              <option>First-Time Buyer</option>
-            </select>
+              All Agents
+            </button>
+            <button 
+              className={agentCategory === 'Residential' ? 'active' : ''}
+              onClick={() => handleCategoryFilter('Residential')}
+            >
+              Residential
+            </button>
+            <button 
+              className={agentCategory === 'Commercial' ? 'active' : ''}
+              onClick={() => handleCategoryFilter('Commercial')}
+            >
+              Commercial
+            </button>
+            <button 
+              className={agentCategory === 'Luxury' ? 'active' : ''}
+              onClick={() => handleCategoryFilter('Luxury')}
+            >
+              Luxury
+            </button>
+            <button 
+              className={agentCategory === 'Investment' ? 'active' : ''}
+              onClick={() => handleCategoryFilter('Investment')}
+            >
+              Investment
+            </button>
           </div>
           
-          <div className="filter-group">
-            <label htmlFor="verification">Verification Level</label>
-            <select 
-              id="verification"
-              value={verificationLevel} 
-              onChange={(e) => setVerificationLevel(e.target.value)}
+          <div className="explore-all-container">
+            <button 
+              className="explore-all-button"
+              onClick={() => setAgentCategory('All')}
             >
-              <option>Any Level</option>
-              <option>Premium</option>
-              <option>Enhanced</option>
-              <option>Basic</option>
-            </select>
-          </div>
-          
-          <div className="filter-group">
-            <label htmlFor="response-time">Response Time</label>
-            <select 
-              id="response-time"
-              value={responseTime} 
-              onChange={(e) => setResponseTime(e.target.value)}
-            >
-              <option>Any</option>
-              <option>Within 1 hour</option>
-              <option>Within 3 hours</option>
-              <option>Within 24 hours</option>
-            </select>
+              Explore All Agents
+            </button>
           </div>
         </div>
-        
-        {/* Results Header */}
+      </div>
+      
+      <div className="agents-results-container">
         <div className="results-header">
-          <p>Showing {agents.length} agents</p>
-          <div className="sort-container">
-            <span>Sort by:</span>
-            <select 
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="sort-select"
-              aria-label="Sort agents"
+          <div className="results-count">
+            <span>{agents.length} Agents Found</span>
+            <button 
+              className="favorites-button"
+              onClick={() => setShowFavorites(!showFavorites)}
             >
-              <option>Engagement Score</option>
-              <option>Most Listings</option>
-              <option>Name A-Z</option>
-            </select>
+              {showFavorites ? 'All Agents' : 'Show Favorites'}
+            </button>
+          </div>
+          
+          <div className="view-options">
+            <div className="view-buttons">
+              <button 
+                className={viewMode === 'grid' ? 'active' : ''}
+                onClick={() => setViewMode('grid')}
+                title="Grid View"
+              >
+                <FaTh />
+              </button>
+              <button 
+                className={viewMode === 'list' ? 'active' : ''}
+                onClick={() => setViewMode('list')}
+                title="List View"
+              >
+                <FaThList />
+              </button>
+            </div>
+            
+            <div className="sort-options">
+              <select 
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+              >
+                <option value="engagement">Highest Engagement</option>
+                <option value="listings">Most Listings</option>
+                <option value="name">Name A-Z</option>
+              </select>
+            </div>
+            
+            <button className="filter-button" title="More Filters">
+              <FaFilter /> Filters
+            </button>
           </div>
         </div>
         
-        {/* Agent Cards */}
-        {agents.length === 0 ? (
-          <div className="no-results">
-            <p>No agents found matching your criteria. Try adjusting your filters.</p>
-          </div>
-        ) : (
-          <div className="agent-grid">
-            {agents.map(agent => (
-              <div className="agent-card" key={agent.id}>
-                <div className="agent-header">
-                  <div className="agent-initials" style={{ backgroundColor: agent.bgColor || '#1a2b50' }}>
-                    {agent.initials}
-                  </div>
-                  <div className="agent-info">
-                    <h3 className="agent-name">{agent.name}</h3>
-                    <div className={`badge ${agent.badge.toLowerCase()}`}>{agent.badge}</div>
-                  </div>
-                </div>
-                
-                <div className="agent-role">{agent.title}</div>
-                <div className="agent-company">{agent.company}</div>
-                
-                <div className="agent-stats">
-                  <div className="engagement-score">
-                    <span className="score">{agent.engagement}</span>
-                    <span className="label">Engagement</span>
-                  </div>
-                  <div className="listing-count">
-                    <span className="count">{agent.listings}</span>
-                    <span className="label">Active listings</span>
-                  </div>
-                </div>
-                
-                <div className="agent-actions">
-                  <button className="message-btn">
-                    <FaEnvelope /> Message
-                  </button>
-                  <button className="call-btn">
-                    <FaPhoneAlt /> Call
-                  </button>
-                </div>
-                
-                <a href="#" className="profile-link">View Full Profile</a>
+        <div className={`agent-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
+          {agents.length === 0 ? (
+            <div className="no-agents">
+              <h3>No agents found</h3>
+              <p>Try adjusting your search criteria or explore all agents</p>
+            </div>
+          ) : (
+            agents.map(agent => (
+              <div key={agent.id} className="agent-card-wrapper">
+                <AgentCard agent={agent} />
               </div>
-            ))}
-          </div>
-        )}
+            ))
+          )}
+        </div>
       </div>
     </div>
   );

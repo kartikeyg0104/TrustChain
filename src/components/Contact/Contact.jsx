@@ -6,7 +6,6 @@ import './Contact.css';
 function Contact() {
   return (
     <div className="contact-page">
-
       
       <div className="contact-container">
         <h1 className="contact-title">Contact Us</h1>
@@ -90,8 +89,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      
-
     </div>
   );
 }
