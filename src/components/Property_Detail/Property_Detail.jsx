@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { featuredProperties } from '../../data/properties';
@@ -90,42 +89,43 @@ function Property_Detail() {
           </div>
         </div>
         
-        <div className="property-description">
-          <h2>Description</h2>
-          <p>This beautiful {property.title.toLowerCase()} is located in the heart of downtown with stunning city views. Featuring high-end finishes, stainless steel appliances, and an open floor plan perfect for entertaining. The building offers a fitness center, rooftop pool, and 24/7 concierge service.</p>
-        </div>
-        
-        <div className="property-features">
-          <h2>Features</h2>
-          <ul className="features-list">
-            <li>Central Air Conditioning</li>
-            <li>In-Unit Washer & Dryer</li>
-            <li>Hardwood Flooring</li>
-            <li>Walk-in Closets</li>
-            <li>Stainless Steel Appliances</li>
-            <li>High Ceilings</li>
-            <li>24/7 Security</li>
-            <li>Fitness Center Access</li>
-          </ul>
-        </div>
-        
-        <div className="contact-agent">
-          <h2>Contact Listing Agent</h2>
-          <div className="agent-card">
-            <div className="agent-info">
+        <div className="property-details-sections">
+          <div className="property-description">
+            <h2>Description</h2>
+            <p>This beautiful modern downtown apartment is located in the heart of downtown with stunning city views. Featuring high-end finishes, stainless steel appliances, and an open floor plan perfect for entertaining. The building offers a fitness center, rooftop pool, and 24/7 concierge service.</p>
+          </div>
+          
+          <div className="property-features">
+            <h2>Features</h2>
+            <ul className="features-list">
+              <li>Central Air Conditioning</li>
+              <li>In-Unit Washer & Dryer</li>
+              <li>Hardwood Flooring</li>
+              <li>Walk-in Closets</li>
+              <li>Stainless Steel Appliances</li>
+              <li>High Ceilings</li>
+              <li>24/7 Security</li>
+              <li>Fitness Center Access</li>
+            </ul>
+          </div>
+          
+          <div className="contact-agent">
+            <h2>Contact Listing Agent</h2>
+            <div className="agent-card">
               <div className="agent-avatar">MR</div>
-              <div className="agent-details">
-                <h3>Michael Rodriguez</h3>
-                <p>Senior Real Estate Agent</p>
-                <p>PropConnect Realty</p>
+              <div className="agent-info">
+                <div className="agent-details">
+                  <h3>Michael Rodriguez</h3>
+                  <p>Senior Real Estate Agent</p>
+                  <p>PropConnect Realty</p>
+                </div>
               </div>
-            </div>
-            <div className="agent-actions">
               <button className="contact-button primary">Message</button>
-              <button className="contact-button secondary">Call</button>
             </div>
           </div>
         </div>
+        
+        {/* ...any other sections... */}
       </div>
     </div>
   );

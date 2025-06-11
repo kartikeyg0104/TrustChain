@@ -8,7 +8,7 @@ function AgentCard({ agent }) {
   const { id, name, initials, title, company, badge, engagement, listings, rating = 4.8 } = agent;
   
   return (
-    <div className="agent-card">
+    <div className="agent-card" style={{backgroundColor:"white"}}>
       <div className="agent-avatar" style={{backgroundColor: agent.bgColor || '#1a2b50'}}>{initials}</div>
       <span className={`badge ${badge.toLowerCase()}`}>{badge}</span>
       <h3>{name}</h3>

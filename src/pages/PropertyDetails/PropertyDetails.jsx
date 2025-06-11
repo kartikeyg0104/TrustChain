@@ -257,6 +257,22 @@ const PropertyDetails = () => {
             </div>
           </>
         )}
+        
+        {activeTab === 'features' && (
+          <div className="property-features">
+            <h2>Features</h2>
+            <ul className="features-list">
+              <li>Central Air Conditioning</li>
+              <li>In-Unit Washer & Dryer</li>
+              <li>Hardwood Flooring</li>
+              <li>Walk-in Closets</li>
+              <li>Stainless Steel Appliances</li>
+              <li>High Ceilings</li>
+              <li>24/7 Security</li>
+              <li>Fitness Center Access</li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
