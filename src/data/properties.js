@@ -1,7 +1,4 @@
-import Modern from '../assets/Homepics/Modern.jpeg';
-import Suburban from '../assets/Homepics/Suburban.jpeg';
-import Mountain from '../assets/Homepics/Mountain.jpeg';
-import Waterfront from '../assets/Homepics/Waterfront.jpeg';
+import { getPropertyImageById } from '../utils/imageUtils';
 
 export const featuredProperties = [
   {
@@ -9,7 +6,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$425,000",
     location: "123 Main St, New York, NY",
-    image: Modern,
+    image: getPropertyImageById(1),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -22,7 +19,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$675,000",
     location: "456 Oak St, Los Angeles, CA",
-    image: Suburban,
+    image: getPropertyImageById(2),
     badge: "Enhanced",
     details: {
       beds: "4 Beds",
@@ -35,7 +32,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$320,000",
     location: "789 Pine Rd, Denver, CO",
-    image: Mountain,
+    image: getPropertyImageById(3),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -48,7 +45,7 @@ export const featuredProperties = [
     title: "Waterfront Luxury Villa",
     price: "$1,250,000",
     location: "101 Harbor Dr, Miami, FL",
-    image: Waterfront,
+    image: getPropertyImageById(4),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -61,7 +58,7 @@ export const featuredProperties = [
     title: "Urban Loft with City Views",
     price: "$550,000",
     location: "202 Skyline Blvd, San Francisco, CA",
-    image: Suburban,
+    image: getPropertyImageById(5),
     badge: "Enhanced",
     details: {
       beds: "1 Bed",
@@ -74,7 +71,7 @@ export const featuredProperties = [
     title: "Charming Country House",
     price: "$400,000",
     location: "303 Greenfield Ln, Austin, TX",
-    image: Mountain,
+    image: getPropertyImageById(6),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -88,7 +85,7 @@ export const featuredProperties = [
     title: "Luxury Penthouse Suite",
     price: "$2,000,000",
     location: "404 Skyline Dr, New York, NY",
-    image: Waterfront,
+    image: getPropertyImageById(7),
     badge: "Premium",
     details: {
       beds: "4 Beds",
@@ -102,7 +99,7 @@ export const featuredProperties = [
     title: "Cozy Beachfront Bungalow",
     price: "$750,000",
     location: "505 Ocean View Rd, Malibu, CA",
-    image: Modern,
+    image: getPropertyImageById(8),
     badge: "Enhanced",
     details: {
       beds: "2 Beds",
@@ -116,7 +113,7 @@ export const featuredProperties = [
     title: "Spacious Suburban Retreat",
     price: "$850,000",
     location: "606 Maple St, Seattle, WA",
-    image:Waterfront,
+    image: getPropertyImageById(9),
     badge: "Basic",
     details: {
       beds: "5 Beds",
@@ -130,7 +127,7 @@ export const featuredProperties = [
     title: "Elegant City Center Condo",
     price: "$600,000",
     location: "707 City Plaza, Chicago, IL",
-    image: Modern,
+    image: getPropertyImageById(10),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -144,7 +141,7 @@ export const featuredProperties = [
     title: "Rustic Mountain Lodge",
     price: "$1,100,000",
     location: "808 Alpine Way, Aspen, CO",
-    image: Mountain,
+    image: getPropertyImageById(11),
     badge: "Enhanced",
     details: {
       beds: "6 Beds",
@@ -157,7 +154,7 @@ export const featuredProperties = [
     title: "Contemporary Urban Apartment",
     price: "$500,000",
     location: "909 Urban St, Boston, MA",
-    image: Suburban,
+    image: getPropertyImageById(12),
     badge: "Basic",
     details: {
       beds: "1 Bed",
@@ -170,7 +167,7 @@ export const featuredProperties = [
     title: "Luxury Waterfront Estate",
     price: "$3,500,000",
     location: "1010 Bayfront Ave, San Diego, CA",
-    image: Modern,
+    image: getPropertyImageById(13),
     badge: "Premium",
     details: {
       beds: "7 Beds",
@@ -183,7 +180,7 @@ export const featuredProperties = [
     title: "Chic Downtown Loft",
     price: "$650,000",
     location: "1111 Cityscape Blvd, Miami, FL",
-    image: Mountain,
+    image: getPropertyImageById(14),
     badge: "Enhanced",
     details: {
       beds: "2 Beds",
@@ -196,7 +193,7 @@ export const featuredProperties = [
     title: "Spacious Family Home",
     price: "$900,000",
     location: "1212 Family Lane, Dallas, TX",
-    image: Suburban,
+    image: getPropertyImageById(15),
     badge: "Basic",
     details: {
       beds: "4 Beds",
@@ -209,7 +206,7 @@ export const featuredProperties = [
     title: "Modern Eco-Friendly House",
     price: "$720,000",
     location: "1313 Greenway Dr, Portland, OR",
-    image: Waterfront,
+    image: getPropertyImageById(16),
     badge: "Premium",
     details: {
       beds: "3 Beds",
@@ -222,7 +219,7 @@ export const featuredProperties = [
     title: "Stylish City Apartment",
     price: "$480,000",
     location: "1414 Urban Ave, Atlanta, GA",
-    image: Waterfront,
+    image: getPropertyImageById(17),
     badge: "Enhanced",
     details: {
       beds: "1 Bed",
@@ -235,7 +232,7 @@ export const featuredProperties = [
     title: "Luxury Mountain Retreat",
     price: "$2,200,000",
     location: "1515 Summit Rd, Lake Tahoe, NV",
-    image: Modern,
+    image: getPropertyImageById(18),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -248,7 +245,7 @@ export const featuredProperties = [
     title: "Charming Coastal Cottage",
     price: "$600,000",
     location: "1616 Seaside Blvd, Cape Cod, MA",
-    image: Suburban,
+    image: getPropertyImageById(19),
     badge: "Enhanced",
     details: {
       beds: "2 Beds",
@@ -261,7 +258,7 @@ export const featuredProperties = [
     title: "Elegant Urban Townhouse",
     price: "$1,000,000",
     location: "1717 City View St, Philadelphia, PA",
-    image: Mountain,
+    image: getPropertyImageById(20),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -274,7 +271,7 @@ export const featuredProperties = [
     title: "Modern High-Rise Apartment",
     price: "$800,000",
     location: "1818 Skyline Blvd, Houston, TX",
-    image: Mountain,
+    image: getPropertyImageById(21),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -287,7 +284,7 @@ export const featuredProperties = [
     title: "Spacious Suburban Villa",
     price: "$1,500,000",
     location: "1919 Villa Rd, Orlando, FL",
-    image: Suburban,
+    image: getPropertyImageById(22),
     badge: "Enhanced",
     details: {
       beds: "5 Beds",
@@ -300,7 +297,7 @@ export const featuredProperties = [
     title: "Rustic Mountain Cabin",
     price: "$350,000",
     location: "2020 Pine Cone Rd, Asheville, NC",
-    image: Waterfront,
+    image: getPropertyImageById(23),
     badge: "Basic",
     details: {
       beds: "2 Beds",
@@ -313,7 +310,7 @@ export const featuredProperties = [
     title: "Luxury Beachfront Villa",
     price: "$2,800,000",
     location: "2121 Ocean Breeze Dr, Malibu, CA",
-    image: Modern,
+    image: getPropertyImageById(24),
     badge: "Premium",
     details: {
       beds: "6 Beds",
@@ -326,7 +323,7 @@ export const featuredProperties = [
     title: "Contemporary City Loft",
     price: "$550,000",
     location: "2222 Urban Way, Chicago, IL",
-    image: Waterfront,
+    image: getPropertyImageById(25),
     badge: "Enhanced",
     details: {
       beds: "1 Bed",
@@ -339,7 +336,7 @@ export const featuredProperties = [
     title: "Elegant Suburban Home",
     price: "$1,200,000",
     location: "2323 Maple Ave, San Francisco, CA",
-    image: Modern,
+    image: getPropertyImageById(26),
     badge: "Basic",
     details: {
       beds: "4 Beds",
@@ -352,7 +349,7 @@ export const featuredProperties = [
     title: "Stylish Urban Apartment",
     price: "$700,000",
     location: "2424 City Center, New York, NY",
-    image: Suburban,
+    image: getPropertyImageById(27),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -365,7 +362,7 @@ export const featuredProperties = [
     title: "Charming Country Cottage",
     price: "$400,000",
     location: "2525 Greenfield Rd, Austin, TX",
-    image: Mountain,
+    image: getPropertyImageById(28),
     badge: "Enhanced",
     details: {
       beds: "3 Beds",
@@ -378,7 +375,7 @@ export const featuredProperties = [
     title: "Luxury Urban Penthouse",
     price: "$3,000,000",
     location: "2626 Skyline Ave, Los Angeles, CA",
-    image: Suburban,
+    image: getPropertyImageById(29),
     badge: "Premium",
     details: {
       beds: "4 Beds",
@@ -391,7 +388,7 @@ export const featuredProperties = [
     title: "Spacious Family Retreat",
     price: "$950,000",
     location: "2727 Family Lane, Seattle, WA",
-    image: Mountain,
+    image: getPropertyImageById(30),
     badge: "Enhanced",
     details: {
       beds: "5 Beds",
@@ -404,7 +401,7 @@ export const featuredProperties = [
     title: "Modern Eco-Friendly Home",
     price: "$780,000",
     location: "2828 Greenway Dr, Portland, OR",
-    image: Modern,
+    image: getPropertyImageById(31),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -417,7 +414,7 @@ export const featuredProperties = [
     title: "Stylish City Center Condo",
     price: "$600,000",
     location: "2929 City Plaza, Boston, MA",
-    image: Waterfront,
+    image: getPropertyImageById(32),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -430,7 +427,7 @@ export const featuredProperties = [
     title: "Waterfront Luxury Villa",
     price: "$972,000",
     location: "989 Waterfront St, Seattle, WA",
-    image: Waterfront,
+    image: getPropertyImageById(33),
     badge: "Enhanced",
     details: {
       beds: "4 Beds",
@@ -443,7 +440,7 @@ export const featuredProperties = [
     title: "Waterfront Luxury Villa",
     price: "$534,000",
     location: "287 Waterfront St, Austin, TX",
-    image: Mountain,
+    image: getPropertyImageById(34),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -456,7 +453,7 @@ export const featuredProperties = [
     title: "Luxury Penthouse Suite",
     price: "$849,000",
     location: "339 Luxury St, Los Angeles, CA",
-    image: Suburban,
+    image: getPropertyImageById(35),
     badge: "Premium",
     details: {
       beds: "4 Beds",
@@ -469,7 +466,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$1,027,000",
     location: "762 Mountain St, Boston, MA",
-    image: Mountain,
+    image: getPropertyImageById(36),
     badge: "Enhanced",
     details: {
       beds: "1 Beds",
@@ -482,7 +479,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$776,000",
     location: "792 Suburban St, New York, NY",
-    image: Waterfront,
+    image: getPropertyImageById(37),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -495,7 +492,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$352,000",
     location: "488 Suburban St, Denver, CO",
-    image: Mountain,
+    image: getPropertyImageById(38),
     badge: "Basic",
     details: {
       beds: "1 Beds",
@@ -508,7 +505,7 @@ export const featuredProperties = [
     title: "Beachside Bungalow",
     price: "$226,000",
     location: "404 Beachside St, Boston, MA",
-    image: Modern,
+    image: getPropertyImageById(39),
     badge: "Basic",
     details: {
       beds: "5 Beds",
@@ -521,7 +518,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$770,000",
     location: "905 Mountain St, Denver, CO",
-    image: Waterfront,
+    image: getPropertyImageById(40),
     badge: "Basic",
     details: {
       beds: "4 Beds",
@@ -534,7 +531,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$677,000",
     location: "781 Suburban St, Boston, MA",
-    image: Modern,
+    image: getPropertyImageById(41),
     badge: "Enhanced",
     details: {
       beds: "4 Beds",
@@ -547,7 +544,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$502,000",
     location: "774 Suburban St, Boston, MA",
-    image: Mountain,
+    image: getPropertyImageById(42),
     badge: "Basic",
     details: {
       beds: "5 Beds",
@@ -560,7 +557,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$414,000",
     location: "573 Modern St, Denver, CO",
-    image: Mountain,
+    image: getPropertyImageById(43),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -573,7 +570,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$237,000",
     location: "753 Mountain St, Miami, FL",
-    image: Suburban,
+    image: getPropertyImageById(44),
     badge: "Basic",
     details: {
       beds: "4 Beds",
@@ -586,7 +583,7 @@ export const featuredProperties = [
     title: "Luxury Penthouse Suite",
     price: "$520,000",
     location: "647 Luxury St, Denver, CO",
-    image: Waterfront,
+    image: getPropertyImageById(45),
     badge: "Enhanced",
     details: {
       beds: "5 Beds",
@@ -599,7 +596,7 @@ export const featuredProperties = [
     title: "Urban Studio Flat",
     price: "$684,000",
     location: "214 Urban St, Austin, TX",
-    image: Modern,
+    image: getPropertyImageById(46),
     badge: "Basic",
     details: {
       beds: "1 Beds",
@@ -612,7 +609,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$1,131,000",
     location: "933 Suburban St, Los Angeles, CA",
-    image: Suburban,
+    image: getPropertyImageById(47),
     badge: "Premium",
     details: {
       beds: "4 Beds",
@@ -625,7 +622,7 @@ export const featuredProperties = [
     title: "Beachside Bungalow",
     price: "$1,047,000",
     location: "173 Beachside St, Boston, MA",
-    image: Waterfront,
+    image: getPropertyImageById(48),
     badge: "Enhanced",
     details: {
       beds: "3 Beds",
@@ -638,7 +635,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$962,000",
     location: "819 Suburban St, Austin, TX",
-    image: Mountain,
+    image: getPropertyImageById(49),
     badge: "Enhanced",
     details: {
       beds: "3 Beds",
@@ -651,7 +648,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$1,230,000",
     location: "316 Modern St, Miami, FL",
-    image: Suburban,
+    image: getPropertyImageById(50),
     badge: "Basic",
     details: {
       beds: "5 Beds",
@@ -664,7 +661,7 @@ export const featuredProperties = [
     title: "Luxury Penthouse Suite",
     price: "$272,000",
     location: "368 Luxury St, Chicago, IL",
-    image: Suburban,
+    image: getPropertyImageById(51),
     badge: "Premium",
     details: {
       beds: "3 Beds",
@@ -677,7 +674,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$206,000",
     location: "932 Mountain St, Miami, FL",
-    image: Modern,
+    image: getPropertyImageById(52),
     badge: "Basic",
     details: {
       beds: "5 Beds",
@@ -690,7 +687,7 @@ export const featuredProperties = [
     title: "Waterfront Luxury Villa",
     price: "$865,000",
     location: "423 Waterfront St, Chicago, IL",
-    image: Waterfront,
+    image: getPropertyImageById(53),
     badge: "Basic",
     details: {
       beds: "1 Beds",
@@ -703,7 +700,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$427,000",
     location: "964 Modern St, Miami, FL",
-    image: Mountain,
+    image: getPropertyImageById(54),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -716,7 +713,7 @@ export const featuredProperties = [
     title: "Beachside Bungalow",
     price: "$1,026,000",
     location: "665 Beachside St, Denver, CO",
-    image: Suburban,
+    image: getPropertyImageById(55),
     badge: "Premium",
     details: {
       beds: "3 Beds",
@@ -729,7 +726,7 @@ export const featuredProperties = [
     title: "Rustic Ranch House",
     price: "$327,000",
     location: "905 Rustic St, Denver, CO",
-    image: Modern,
+    image: getPropertyImageById(56),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -742,7 +739,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$717,000",
     location: "394 Suburban St, Denver, CO",
-    image: Mountain,
+    image: getPropertyImageById(57),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -755,7 +752,7 @@ export const featuredProperties = [
     title: "Beachside Bungalow",
     price: "$807,000",
     location: "888 Beachside St, Denver, CO",
-    image: Waterfront,
+    image: getPropertyImageById(58),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -768,7 +765,7 @@ export const featuredProperties = [
     title: "Urban Studio Flat",
     price: "$297,000",
     location: "719 Urban St, Los Angeles, CA",
-    image: Modern,
+    image: getPropertyImageById(59),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -781,7 +778,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$420,000",
     location: "219 Mountain St, Chicago, IL",
-    image: Suburban,
+    image: getPropertyImageById(60),
     badge: "Basic",
     details: {
       beds: "5 Beds",
@@ -794,7 +791,7 @@ export const featuredProperties = [
     title: "Luxury Penthouse Suite",
     price: "$291,000",
     location: "134 Luxury St, Austin, TX",
-    image: Suburban,
+    image: getPropertyImageById(61),
     badge: "Premium",
     details: {
       beds: "4 Beds",
@@ -807,7 +804,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$1,173,000",
     location: "390 Modern St, Boston, MA",
-    image: Mountain,
+    image: getPropertyImageById(62),
     badge: "Basic",
     details: {
       beds: "3 Beds",
@@ -820,7 +817,7 @@ export const featuredProperties = [
     title: "Urban Studio Flat",
     price: "$198,000",
     location: "955 Urban St, Chicago, IL",
-    image: Waterfront,
+    image: getPropertyImageById(63),
     badge: "Premium",
     details: {
       beds: "3 Beds",
@@ -833,7 +830,7 @@ export const featuredProperties = [
     title: "Beachside Bungalow",
     price: "$344,000",
     location: "179 Beachside St, Chicago, IL",
-    image: Mountain,
+    image: getPropertyImageById(64),
     badge: "Basic",
     details: {
       beds: "2 Beds",
@@ -846,7 +843,7 @@ export const featuredProperties = [
     title: "Mountain View Cottage",
     price: "$227,000",
     location: "622 Mountain St, Denver, CO",
-    image: Modern,
+    image: getPropertyImageById(65),
     badge: "Premium",
     details: {
       beds: "4 Beds",
@@ -859,7 +856,7 @@ export const featuredProperties = [
     title: "Urban Studio Flat",
     price: "$928,000",
     location: "428 Urban St, Miami, FL",
-    image: Mountain,
+    image: getPropertyImageById(66),
     badge: "Basic",
     details: {
       beds: "2 Beds",
@@ -872,7 +869,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$811,000",
     location: "200 Modern St, Austin, TX",
-    image: Waterfront,
+    image: getPropertyImageById(67),
     badge: "Basic",
     details: {
       beds: "2 Beds",
@@ -885,7 +882,7 @@ export const featuredProperties = [
     title: "Urban Studio Flat",
     price: "$1,058,000",
     location: "195 Urban St, Miami, FL",
-    image: Waterfront,
+    image: getPropertyImageById(68),
     badge: "Enhanced",
     details: {
       beds: "2 Beds",
@@ -898,7 +895,7 @@ export const featuredProperties = [
     title: "Luxury Penthouse Suite",
     price: "$245,000",
     location: "398 Luxury St, Los Angeles, CA",
-    image: Waterfront,
+    image: getPropertyImageById(69),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -911,7 +908,7 @@ export const featuredProperties = [
     title: "Rustic Ranch House",
     price: "$241,000",
     location: "691 Rustic St, Miami, FL",
-    image: Mountain,
+    image: getPropertyImageById(70),
     badge: "Basic",
     details: {
       beds: "2 Beds",
@@ -924,7 +921,7 @@ export const featuredProperties = [
     title: "Urban Studio Flat",
     price: "$864,000",
     location: "402 Urban St, New York, NY",
-    image: Modern,
+    image: getPropertyImageById(71),
     badge: "Enhanced",
     details: {
       beds: "2 Beds",
@@ -937,7 +934,7 @@ export const featuredProperties = [
     title: "Waterfront Luxury Villa",
     price: "$271,000",
     location: "594 Waterfront St, Austin, TX",
-    image: Suburban,
+    image: getPropertyImageById(72),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -950,7 +947,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$597,000",
     location: "879 Modern St, Miami, FL",
-    image: Mountain,
+    image: getPropertyImageById(73),
     badge: "Premium",
     details: {
       beds: "5 Beds",
@@ -963,7 +960,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$894,000",
     location: "975 Suburban St, New York, NY",
-    image: Modern,
+    image: getPropertyImageById(74),
     badge: "Premium",
     details: {
       beds: "1 Beds",
@@ -976,7 +973,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$776,000",
     location: "909 Suburban St, New York, NY",
-    image: Suburban,
+    image: getPropertyImageById(75),
     badge: "Basic",
     details: {
       beds: "1 Beds",
@@ -989,7 +986,7 @@ export const featuredProperties = [
     title: "Suburban Family Home",
     price: "$223,000",
     location: "404 Suburban St, Chicago, IL",
-    image: Waterfront,
+    image: getPropertyImageById(76),
     badge: "Premium",
     details: {
       beds: "2 Beds",
@@ -1002,7 +999,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$1,030,000",
     location: "107 Modern St, New York, NY",
-    image: Waterfront,
+    image: getPropertyImageById(77),
     badge: "Premium",
     details: {
       beds: "3 Beds",
@@ -1015,7 +1012,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$502,000",
     location: "193 Modern St, Los Angeles, CA",
-    image: Mountain,
+    image: getPropertyImageById(78),
     badge: "Basic",
     details: {
       beds: "2 Beds",
@@ -1028,7 +1025,7 @@ export const featuredProperties = [
     title: "Modern Downtown Apartment",
     price: "$804,000",
     location: "962 Modern St, New York, NY",
-    image: Waterfront,
+    image: getPropertyImageById(79),
     badge: "Enhanced",
     details: {
       beds: "1 Beds",
@@ -1040,7 +1037,7 @@ export const featuredProperties = [
     id: 80,
     title: "Beachside Bungalow",
     area: "2020 sq ft",
-    image: Modern,
+    image: getPropertyImageById(80),
     badge: "Premium"
   },
   {
@@ -1051,7 +1048,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1416 sq ft",
-    image: Modern,
+    image: getPropertyImageById(95),
     badge: "Premium"
   },
   {
@@ -1062,7 +1059,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "3184 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(96),
     badge: "Enhanced"
   },
   {
@@ -1073,7 +1070,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "1577 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(97),
     badge: "Premium"
   },
   {
@@ -1084,7 +1081,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "3374 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(98),
     badge: "Basic"
   },
   {
@@ -1095,7 +1092,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "3888 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(99),
     badge: "Premium"
   },
   {
@@ -1106,7 +1103,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1272 sq ft",
-    image: Modern,
+    image: getPropertyImageById(100),
     badge: "Premium"
   },
   {
@@ -1117,7 +1114,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "2054 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(101),
     badge: "Premium"
   },
   {
@@ -1128,7 +1125,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3200 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(102),
     badge: "Basic"
   },
   {
@@ -1139,7 +1136,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "2188 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(103),
     badge: "Premium"
   },
   {
@@ -1150,7 +1147,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "1809 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(104),
     badge: "Enhanced"
   },
   {
@@ -1161,7 +1158,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3774 sq ft",
-    image: Modern,
+    image: getPropertyImageById(105),
     badge: "Basic"
   },
   {
@@ -1172,7 +1169,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1078 sq ft",
-    image: Modern,
+    image: getPropertyImageById(106),
     badge: "Basic"
   },
   {
@@ -1183,7 +1180,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "2808 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(107),
     badge: "Premium"
   },
   {
@@ -1194,7 +1191,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3337 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(108),
     badge: "Enhanced"
   },
   {
@@ -1205,7 +1202,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "2023 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(109),
     badge: "Enhanced"
   },
   {
@@ -1216,7 +1213,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "2200 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(110),
     badge: "Premium"
   },
   {
@@ -1227,7 +1224,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1796 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(111),
     badge: "Basic"
   },
   {
@@ -1238,7 +1235,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3381 sq ft",
-    image: Modern,
+    image: getPropertyImageById(112),
     badge: "Basic"
   },
   {
@@ -1249,7 +1246,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2787 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(113),
     badge: "Enhanced"
   },
   {
@@ -1260,7 +1257,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1759 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(114),
     badge: "Enhanced"
   },
   {
@@ -1271,7 +1268,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "1826 sq ft",
-    image: Modern,
+    image: getPropertyImageById(115),
     badge: "Basic"
   },
   {
@@ -1282,7 +1279,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "1301 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(116),
     badge: "Enhanced"
   },
   {
@@ -1293,7 +1290,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1952 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(117),
     badge: "Enhanced"
   },
   {
@@ -1304,7 +1301,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2006 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(118),
     badge: "Premium"
   },
   {
@@ -1315,7 +1312,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "2166 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(119),
     badge: "Enhanced"
   },
   {
@@ -1326,7 +1323,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1190 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(120),
     badge: "Enhanced"
   },
   {
@@ -1337,7 +1334,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3957 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(121),
     badge: "Enhanced"
   },
   {
@@ -1348,7 +1345,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3000 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(122),
     badge: "Premium"
   },
   {
@@ -1359,7 +1356,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "1755 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(123),
     badge: "Premium"
   },
   {
@@ -1370,7 +1367,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3278 sq ft",
-    image: Modern,
+    image: getPropertyImageById(124),
     badge: "Basic"
   },
   {
@@ -1381,7 +1378,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3773 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(125),
     badge: "Enhanced"
   },
   {
@@ -1392,7 +1389,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "2697 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(126),
     badge: "Basic"
   },
   {
@@ -1403,7 +1400,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3316 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(127),
     badge: "Enhanced"
   },
   {
@@ -1414,7 +1411,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "2873 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(128),
     badge: "Enhanced"
   },
   {
@@ -1425,7 +1422,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1347 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(129),
     badge: "Premium"
   },
   {
@@ -1436,7 +1433,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "1270 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(130),
     badge: "Premium"
   },
   {
@@ -1447,7 +1444,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2382 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(131),
     badge: "Basic"
   },
   {
@@ -1458,7 +1455,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "2200 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(132),
     badge: "Basic"
   },
   {
@@ -1469,7 +1466,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2355 sq ft",
-    image: Modern,
+    image: getPropertyImageById(133),
     badge: "Enhanced"
   },
   {
@@ -1480,7 +1477,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2152 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(134),
     badge: "Basic"
   },
   {
@@ -1491,7 +1488,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2258 sq ft",
-    image: Modern,
+    image: getPropertyImageById(135),
     badge: "Premium"
   },
   {
@@ -1502,7 +1499,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "2493 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(136),
     badge: "Enhanced"
   },
   {
@@ -1513,7 +1510,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "3097 sq ft",
-    image: Modern,
+    image: getPropertyImageById(137),
     badge: "Enhanced"
   },
   {
@@ -1524,7 +1521,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2380 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(138),
     badge: "Enhanced"
   },
   {
@@ -1535,7 +1532,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1895 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(139),
     badge: "Basic"
   },
   {
@@ -1546,7 +1543,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "2792 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(140),
     badge: "Premium"
   },
   {
@@ -1557,7 +1554,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "2062 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(141),
     badge: "Basic"
   },
   {
@@ -1568,7 +1565,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2923 sq ft",
-    image: Modern,
+    image: getPropertyImageById(142),
     badge: "Basic"
   },
   {
@@ -1579,7 +1576,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1332 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(143),
     badge: "Premium"
   },
   {
@@ -1590,7 +1587,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1709 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(144),
     badge: "Premium"
   },
   {
@@ -1601,7 +1598,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "2310 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(145),
     badge: "Enhanced"
   },
   {
@@ -1612,7 +1609,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3909 sq ft",
-    image: Modern,
+    image: getPropertyImageById(146),
     badge: "Basic"
   },
   {
@@ -1623,7 +1620,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3058 sq ft",
-    image: Modern,
+    image: getPropertyImageById(147),
     badge: "Basic"
   },
   {
@@ -1634,7 +1631,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "912 sq ft",
-    image: Modern,
+    image: getPropertyImageById(148),
     badge: "Basic"
   },
   {
@@ -1645,7 +1642,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "1239 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(149),
     badge: "Premium"
   },
   {
@@ -1656,7 +1653,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "1600 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(150),
     badge: "Enhanced"
   },
   {
@@ -1667,7 +1664,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3914 sq ft",
-    image: Modern,
+    image: getPropertyImageById(151),
     badge: "Enhanced"
   },
   {
@@ -1678,7 +1675,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "849 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(152),
     badge: "Premium"
   },
   {
@@ -1689,7 +1686,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "2289 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(153),
     badge: "Basic"
   },
   {
@@ -1700,7 +1697,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "1604 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(154),
     badge: "Enhanced"
   },
   {
@@ -1711,7 +1708,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3802 sq ft",
-    image: Modern,
+    image: getPropertyImageById(155),
     badge: "Premium"
   },
   {
@@ -1722,7 +1719,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "1987 sq ft",
-    image: Modern,
+    image: getPropertyImageById(156),
     badge: "Premium"
   },
   {
@@ -1733,7 +1730,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2516 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(157),
     badge: "Enhanced"
   },
   {
@@ -1744,7 +1741,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "1401 sq ft",
-    image: Modern,
+    image: getPropertyImageById(158),
     badge: "Basic"
   },
   {
@@ -1755,7 +1752,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "3556 sq ft",
-    image: Modern,
+    image: getPropertyImageById(159),
     badge: "Premium"
   },
   {
@@ -1766,7 +1763,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3272 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(160),
     badge: "Premium"
   },
   {
@@ -1777,7 +1774,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "1669 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(161),
     badge: "Basic"
   },
   {
@@ -1788,7 +1785,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "3929 sq ft",
-    image: Modern,
+    image: getPropertyImageById(162),
     badge: "Basic"
   },
   {
@@ -1799,7 +1796,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3316 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(163),
     badge: "Basic"
   },
   {
@@ -1810,7 +1807,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "3557 ft",
-    image: Modern,
+    image: getPropertyImageById(164),
     badge: "Premium"
   },
   {
@@ -1821,7 +1818,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3234 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(165),
     badge: "Enhanced"
   },
   {
@@ -1832,7 +1829,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3979 sq ft",
-    image: Modern,
+    image: getPropertyImageById(166),
     badge: "Enhanced"
   },
   {
@@ -1843,7 +1840,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "850 sq ft",
-    image: Modern,
+    image: getPropertyImageById(167),
     badge: "Premium"
   },
   {
@@ -1854,7 +1851,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "3140 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(168),
     badge: "Premium"
   },
   {
@@ -1865,7 +1862,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3468 sq ft",
-    image: Modern,
+    image: getPropertyImageById(169),
     badge: "Basic"
   },
   {
@@ -1876,7 +1873,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2871 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(170),
     badge: "Premium"
   },
   {
@@ -1887,7 +1884,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3106 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(171),
     badge: "Basic"
   },
   {
@@ -1898,7 +1895,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2087 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(172),
     badge: "Premium"
   },
   {
@@ -1909,7 +1906,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1041 sq ft",
-    image: Modern,
+    image: getPropertyImageById(173),
     badge: "Basic"
   },
   {
@@ -1920,7 +1917,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "864 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(174),
     badge: "Premium"
   },
   {
@@ -1931,7 +1928,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "1499 sq ft",
-    image: Modern,
+    image: getPropertyImageById(175),
     badge: "Premium"
   },
   {
@@ -1942,7 +1939,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3129 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(176),
     badge: "Basic"
   },
   {
@@ -1953,7 +1950,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3157 sq ft",
-    image: Modern,
+    image: getPropertyImageById(177),
     badge: "Enhanced"
   },
   {
@@ -1964,7 +1961,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2655 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(178),
     badge: "Enhanced"
   },
   {
@@ -1975,7 +1972,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "2939 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(179),
     badge: "Premium"
   },
   {
@@ -1986,7 +1983,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "1426 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(180),
     badge: "Basic"
   },
   {
@@ -1997,7 +1994,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "1491 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(181),
     badge: "Premium"
   },
   {
@@ -2008,7 +2005,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "995 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(182),
     badge: "Enhanced"
   },
   {
@@ -2019,7 +2016,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2737 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(183),
     badge: "Premium"
   },
   {
@@ -2030,7 +2027,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3036 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(184),
     badge: "Enhanced"
   },
   {
@@ -2041,7 +2038,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2481 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(185),
     badge: "Basic"
   },
   {
@@ -2052,7 +2049,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3647 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(186),
     badge: "Basic"
   },
   {
@@ -2063,7 +2060,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2507 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(187),
     badge: "Basic"
   },
   {
@@ -2074,7 +2071,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "3861 sq ft",
-    image: Modern,
+    image: getPropertyImageById(188),
     badge: "Basic"
   },
   {
@@ -2085,7 +2082,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "3058 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(189),
     badge: "Enhanced"
   },
   {
@@ -2096,7 +2093,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2896 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(190),
     badge: "Premium"
   },
   {
@@ -2107,7 +2104,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3900 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(191),
     badge: "Premium"
   },
   {
@@ -2118,7 +2115,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "3262 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(192),
     badge: "Enhanced"
   },
   {
@@ -2129,7 +2126,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "1384 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(193),
     badge: "Basic"
   },
   {
@@ -2140,7 +2137,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1082 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(194),
     badge: "Enhanced"
   },
   {
@@ -2151,7 +2148,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3336 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(195),
     badge: "Basic"
   },
   {
@@ -2162,7 +2159,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3346 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(196),
     badge: "Premium"
   },
   {
@@ -2173,7 +2170,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2833 sq ft",
-    image: Modern,
+    image: getPropertyImageById(197),
     badge: "Enhanced"
   },
   {
@@ -2184,7 +2181,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1011 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(198),
     badge: "Basic"
   },
   {
@@ -2195,7 +2192,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1773 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(199),
     badge: "Premium"
   },
   {
@@ -2206,7 +2203,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "1350 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(200),
     badge: "Basic"
   },
   {
@@ -2217,7 +2214,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2494 sq ft",
-    image: Modern,
+    image: getPropertyImageById(201),
     badge: "Enhanced"
   },
   {
@@ -2228,7 +2225,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1874 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(202),
     badge: "Premium"
   },
   {
@@ -2239,7 +2236,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "3729 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(203),
     badge: "Enhanced"
   },
   {
@@ -2250,7 +2247,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2465 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(204),
     badge: "Basic"
   },
   {
@@ -2261,7 +2258,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "3429 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(205),
     badge: "Enhanced"
   },
   {
@@ -2272,7 +2269,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "1431 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(206),
     badge: "Enhanced"
   },
   {
@@ -2283,7 +2280,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2181 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(207),
     badge: "Enhanced"
   },
   {
@@ -2294,7 +2291,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "3367 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(208),
     badge: "Basic"
   },
   {
@@ -2305,7 +2302,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "2634 sq ft",
-    image: Modern,
+    image: getPropertyImageById(209),
     badge: "Basic"
   },
   {
@@ -2316,7 +2313,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3031 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(210),
     badge: "Premium"
   },
   {
@@ -2327,7 +2324,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1817 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(211),
     badge: "Basic"
   },
   {
@@ -2338,7 +2335,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2929 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(212),
     badge: "Enhanced"
   },
   {
@@ -2349,7 +2346,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3435 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(213),
     badge: "Premium"
   },
   {
@@ -2360,7 +2357,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1192 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(214),
     badge: "Premium"
   },
   {
@@ -2371,7 +2368,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2428 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(215),
     badge: "Basic"
   },
   {
@@ -2382,7 +2379,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1847 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(216),
     badge: "Premium"
   },
   {
@@ -2393,7 +2390,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3825 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(217),
     badge: "Basic"
   },
   {
@@ -2404,7 +2401,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "2170 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(218),
     badge: "Enhanced"
   },
   {
@@ -2415,7 +2412,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2797 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(219),
     badge: "Premium"
   },
   {
@@ -2426,7 +2423,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1489 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(220),
     badge: "Premium"
   },
   {
@@ -2437,7 +2434,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2255 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(221),
     badge: "Enhanced"
   },
   {
@@ -2448,7 +2445,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1303 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(222),
     badge: "Basic"
   },
   {
@@ -2459,7 +2456,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1915 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(223),
     badge: "Enhanced"
   },
   {
@@ -2470,7 +2467,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2865 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(224),
     badge: "Basic"
   },
   {
@@ -2481,7 +2478,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "1468 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(225),
     badge: "Premium"
   },
   {
@@ -2492,7 +2489,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "1734 sq ft",
-    image: Modern,
+    image: getPropertyImageById(226),
     badge: "Basic"
   },
   {
@@ -2503,7 +2500,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3943 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(227),
     badge: "Enhanced"
   },
   {
@@ -2514,7 +2511,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "1134 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(228),
     badge: "Basic"
   },
   {
@@ -2525,7 +2522,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "991 sq ft",
-    image: Modern,
+    image: getPropertyImageById(229),
     badge: "Basic"
   },
   {
@@ -2536,7 +2533,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "2832 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(230),
     badge: "Enhanced"
   },
   {
@@ -2547,7 +2544,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3953 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(231),
     badge: "Enhanced"
   },
   {
@@ -2558,7 +2555,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "3695 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(232),
     badge: "Enhanced"
   },
   {
@@ -2569,7 +2566,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "3962 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(233),
     badge: "Enhanced"
   },
   {
@@ -2580,7 +2577,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3053 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(234),
     badge: "Basic"
   },
   {
@@ -2591,7 +2588,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "2478 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(235),
     badge: "Basic"
   },
   {
@@ -2602,7 +2599,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3130 sq ft",
-    image: Modern,
+    image: getPropertyImageById(236),
     badge: "Basic"
   },
   {
@@ -2613,7 +2610,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2163 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(237),
     badge: "Basic"
   },
   {
@@ -2624,7 +2621,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "3782 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(238),
     badge: "Premium"
   },
   {
@@ -2635,7 +2632,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1750 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(239),
     badge: "Enhanced"
   },
   {
@@ -2646,7 +2643,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "3111 ft",
-    image: Suburban,
+    image: getPropertyImageById(240),
     badge: "Premium"
   },
   {
@@ -2657,7 +2654,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2393 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(241),
     badge: "Basic"
   },
   {
@@ -2668,7 +2665,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3372 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(242),
     badge: "Basic"
   },
   {
@@ -2679,7 +2676,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "3216 sq ft",
-    image: Modern,
+    image: getPropertyImageById(243),
     badge: "Premium"
   },
   {
@@ -2690,7 +2687,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3605 sq ft",
-    image: Modern,
+    image: getPropertyImageById(244),
     badge: "Enhanced"
   },
   {
@@ -2701,7 +2698,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3119 sq ft",
-    image: Modern,
+    image: getPropertyImageById(245),
     badge: "Basic"
   },
   {
@@ -2712,7 +2709,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1359 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(246),
     badge: "Premium"
   },
   {
@@ -2723,7 +2720,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "822 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(247),
     badge: "Enhanced"
   },
   {
@@ -2734,7 +2731,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2589 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(248),
     badge: "Basic"
   },
   {
@@ -2745,7 +2742,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2073 sq ft",
-    image: Modern,
+    image: getPropertyImageById(249),
     badge: "Basic"
   },
   {
@@ -2756,7 +2753,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1545 sq ft",
-    image: Modern,
+    image: getPropertyImageById(250),
     badge: "Premium"
   },
   {
@@ -2767,7 +2764,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2344 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(251),
     badge: "Enhanced"
   },
   {
@@ -2778,7 +2775,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "3395 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(252),
     badge: "Basic"
   },
   {
@@ -2789,7 +2786,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "1160 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(253),
     badge: "Basic"
   },
   {
@@ -2800,7 +2797,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2500 sq ft",
-    image: Modern,
+    image: getPropertyImageById(254),
     badge: "Premium"
   },
   {
@@ -2811,7 +2808,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2599 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(255),
     badge: "Premium"
   },
   {
@@ -2822,7 +2819,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "3349 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(256),
     badge: "Enhanced"
   },
   {
@@ -2833,7 +2830,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "1883 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(257),
     badge: "Premium"
   },
   {
@@ -2844,7 +2841,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3348 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(258),
     badge: "Basic"
   },
   {
@@ -2855,7 +2852,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "1989 sq ft",
-    image: Modern,
+    image: getPropertyImageById(259),
     badge: "Enhanced"
   },
   {
@@ -2866,7 +2863,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "3805 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(260),
     badge: "Basic"
   },
   {
@@ -2877,7 +2874,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "2527 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(261),
     badge: "Premium"
   },
   {
@@ -2888,7 +2885,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1269 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(262),
     badge: "Enhanced"
   },
   {
@@ -2899,7 +2896,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2149 sq ft",
-    image: Modern,
+    image: getPropertyImageById(263),
     badge: "Enhanced"
   },
   {
@@ -2910,7 +2907,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "3448 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(264),
     badge: "Premium"
   },
   {
@@ -2921,7 +2918,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "1817 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(265),
     badge: "Enhanced"
   },
   {
@@ -2932,7 +2929,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "3118 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(266),
     badge: "Enhanced"
   },
   {
@@ -2943,7 +2940,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "3862 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(267),
     badge: "Premium"
   },
   {
@@ -2954,7 +2951,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2938 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(268),
     badge: "Premium"
   },
   {
@@ -2965,7 +2962,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1160 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(269),
     badge: "Basic"
   },
   {
@@ -2976,7 +2973,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "3962 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(270),
     badge: "Premium"
   },
   {
@@ -2987,7 +2984,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "1010 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(271),
     badge: "Premium"
   },
   {
@@ -2998,7 +2995,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "963 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(272),
     badge: "Enhanced"
   },
   {
@@ -3009,7 +3006,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "1543 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(273),
     badge: "Premium"
   },
   {
@@ -3020,7 +3017,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2036 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(274),
     badge: "Basic"
   },
   {
@@ -3031,7 +3028,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "1689 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(275),
     badge: "Premium"
   },
   {
@@ -3042,7 +3039,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1055 sq ft",
-    image: Modern,
+    image: getPropertyImageById(276),
     badge: "Enhanced"
   },
   {
@@ -3053,7 +3050,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "1150 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(277),
     badge: "Enhanced"
   },
   {
@@ -3064,7 +3061,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3281 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(278),
     badge: "Basic"
   },
   {
@@ -3075,7 +3072,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1833 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(279),
     badge: "Enhanced"
   },
   {
@@ -3086,7 +3083,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1708 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(280),
     badge: "Basic"
   },
   {
@@ -3097,7 +3094,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "1906 sq ft",
-    image: Modern,
+    image: getPropertyImageById(281),
     badge: "Premium"
   },
   {
@@ -3108,7 +3105,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "1512 sq ft",
-    image: Modern,
+    image: getPropertyImageById(282),
     badge: "Enhanced"
   },
   {
@@ -3119,7 +3116,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1571 sq ft",
-    image: Modern,
+    image: getPropertyImageById(283),
     badge: "Enhanced"
   },
   {
@@ -3130,7 +3127,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "1811 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(284),
     badge: "Basic"
   },
   {
@@ -3141,7 +3138,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3016 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(285),
     badge: "Basic"
   },
   {
@@ -3152,7 +3149,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "2477 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(286),
     badge: "Basic"
   },
   {
@@ -3163,7 +3160,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "809 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(287),
     badge: "Enhanced"
   },
   {
@@ -3174,7 +3171,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1153 sq ft",
-    image: Modern,
+    image: getPropertyImageById(288),
     badge: "Basic"
   },
   {
@@ -3185,7 +3182,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "3117 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(289),
     badge: "Enhanced"
   },
   {
@@ -3196,7 +3193,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "3743 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(290),
     badge: "Premium"
   },
   {
@@ -3207,7 +3204,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3997 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(291),
     badge: "Premium"
   },
   {
@@ -3218,7 +3215,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "978 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(292),
     badge: "Enhanced"
   },
   {
@@ -3229,7 +3226,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "2200 sq ft",
-    image: Modern,
+    image: getPropertyImageById(293),
     badge: "Basic"
   },
   {
@@ -3240,7 +3237,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "821 sq ft",
-    image: Modern,
+    image: getPropertyImageById(294),
     badge: "Enhanced"
   },
   {
@@ -3251,7 +3248,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "2682 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(295),
     badge: "Premium"
   },
   {
@@ -3262,7 +3259,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3215 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(296),
     badge: "Basic"
   },
   {
@@ -3273,7 +3270,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1954 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(297),
     badge: "Premium"
   },
   {
@@ -3284,7 +3281,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2424 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(298),
     badge: "Premium"
   },
   {
@@ -3295,7 +3292,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1001 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(299),
     badge: "Basic"
   },
   {
@@ -3306,7 +3303,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2348 sq ft",
-    image: Modern,
+    image: getPropertyImageById(300),
     badge: "Premium"
   },
   {
@@ -3317,7 +3314,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "3440 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(301),
     badge: "Enhanced"
   },
   {
@@ -3328,7 +3325,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "904 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(302),
     badge: "Basic"
   },
   {
@@ -3339,7 +3336,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "3075 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(303),
     badge: "Premium"
   },
   {
@@ -3350,7 +3347,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "2254 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(304),
     badge: "Premium"
   },
   {
@@ -3361,7 +3358,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1548 sq ft",
-    image: Modern,
+    image: getPropertyImageById(305),
     badge: "Enhanced"
   },
   {
@@ -3372,7 +3369,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "2349 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(306),
     badge: "Basic"
   },
   {
@@ -3383,7 +3380,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2662 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(307),
     badge: "Basic"
   },
   {
@@ -3394,7 +3391,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "3332 sq ft",
-    image: Modern,
+    image: getPropertyImageById(308),
     badge: "Premium"
   },
   {
@@ -3405,7 +3402,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "2073 sq ft",
-    image: Modern,
+    image: getPropertyImageById(309),
     badge: "Enhanced"
   },
   {
@@ -3416,7 +3413,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2246 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(310),
     badge: "Basic"
   },
   {
@@ -3427,7 +3424,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3177 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(311),
     badge: "Enhanced"
   },
   {
@@ -3438,7 +3435,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2280 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(312),
     badge: "Enhanced"
   },
   {
@@ -3449,7 +3446,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3536 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(313),
     badge: "Enhanced"
   },
   {
@@ -3460,7 +3457,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2003 sq ft",
-    image: Modern,
+    image: getPropertyImageById(314),
     badge: "Basic"
   },
   {
@@ -3471,7 +3468,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1473 sq ft",
-    image: Modern,
+    image: getPropertyImageById(315),
     badge: "Premium"
   },
   {
@@ -3482,7 +3479,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2774 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(316),
     badge: "Basic"
   },
   {
@@ -3493,7 +3490,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "3263 sq ft",
-    image: Modern,
+    image: getPropertyImageById(317),
     badge: "Premium"
   },
   {
@@ -3504,7 +3501,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "1716 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(318),
     badge: "Enhanced"
   },
   {
@@ -3515,7 +3512,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2243 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(319),
     badge: "Premium"
   },
   {
@@ -3526,7 +3523,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1580 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(320),
     badge: "Premium"
   },
   {
@@ -3537,7 +3534,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1214 sq ft",
-    image: Modern,
+    image: getPropertyImageById(321),
     badge: "Premium"
   },
   {
@@ -3548,7 +3545,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "1245 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(322),
     badge: "Basic"
   },
   {
@@ -3559,7 +3556,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1321 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(323),
     badge: "Enhanced"
   },
   {
@@ -3570,7 +3567,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1860 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(324),
     badge: "Enhanced"
   },
   {
@@ -3581,7 +3578,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "3276 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(325),
     badge: "Basic"
   },
   {
@@ -3592,7 +3589,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2133 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(326),
     badge: "Enhanced"
   },
   {
@@ -3603,7 +3600,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2368 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(327),
     badge: "Enhanced"
   },
   {
@@ -3614,7 +3611,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3039 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(328),
     badge: "Basic"
   },
   {
@@ -3625,7 +3622,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "945 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(329),
     badge: "Premium"
   },
   {
@@ -3636,7 +3633,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "2760 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(330),
     badge: "Enhanced"
   },
   {
@@ -3647,7 +3644,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "920 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(331),
     badge: "Enhanced"
   },
   {
@@ -3658,7 +3655,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1949 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(332),
     badge: "Basic"
   },
   {
@@ -3669,7 +3666,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "1077 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(333),
     badge: "Basic"
   },
   {
@@ -3680,7 +3677,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2463 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(334),
     badge: "Enhanced"
   },
   {
@@ -3691,7 +3688,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "3490 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(335),
     badge: "Premium"
   },
   {
@@ -3702,7 +3699,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2086 sq ft",
-    image: Modern,
+    image: getPropertyImageById(336),
     badge: "Enhanced"
   },
   {
@@ -3713,7 +3710,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2011 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(337),
     badge: "Basic"
   },
   {
@@ -3724,7 +3721,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1255 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(338),
     badge: "Premium"
   },
   {
@@ -3735,7 +3732,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2540 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(339),
     badge: "Premium"
   },
   {
@@ -3746,7 +3743,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2330 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(340),
     badge: "Premium"
   },
   {
@@ -3757,7 +3754,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "2229 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(341),
     badge: "Basic"
   },
   {
@@ -3768,7 +3765,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "3751 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(342),
     badge: "Enhanced"
   },
   {
@@ -3779,7 +3776,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "3857 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(343),
     badge: "Enhanced"
   },
   {
@@ -3790,7 +3787,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "2405 sq ft",
-    image: Modern,
+    image: getPropertyImageById(344),
     badge: "Basic"
   },
   {
@@ -3801,7 +3798,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "839 sq ft",
-    image: Modern,
+    image: getPropertyImageById(345),
     badge: "Premium"
   },
   {
@@ -3812,7 +3809,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1030 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(346),
     badge: "Enhanced"
   },
   {
@@ -3823,7 +3820,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "2679 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(347),
     badge: "Basic"
   },
   {
@@ -3834,7 +3831,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2642 sq ft",
-    image: Modern,
+    image: getPropertyImageById(348),
     badge: "Basic"
   },
   {
@@ -3845,7 +3842,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "2184 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(349),
     badge: "Premium"
   },
   {
@@ -3856,7 +3853,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "2345 sq ft",
-    image: Modern,
+    image: getPropertyImageById(350),
     badge: "Basic"
   },
   {
@@ -3867,7 +3864,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2034 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(351),
     badge: "Enhanced"
   },
   {
@@ -3878,7 +3875,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3728 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(352),
     badge: "Enhanced"
   },
   {
@@ -3889,7 +3886,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "2653 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(353),
     badge: "Basic"
   },
   {
@@ -3900,7 +3897,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2908 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(354),
     badge: "Enhanced"
   },
   {
@@ -3911,7 +3908,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1334 sq ft",
-    image: Modern,
+    image: getPropertyImageById(355),
     badge: "Premium"
   },
   {
@@ -3922,7 +3919,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2773 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(356),
     badge: "Basic"
   },
   {
@@ -3933,7 +3930,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "2466 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(357),
     badge: "Premium"
   },
   {
@@ -3944,7 +3941,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "1896 sq ft",
-    image: Modern,
+    image: getPropertyImageById(358),
     badge: "Enhanced"
   },
   {
@@ -3955,7 +3952,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1088 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(359),
     badge: "Enhanced"
   },
   {
@@ -3966,7 +3963,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3134 sq ft",
-    image: Modern,
+    image: getPropertyImageById(360),
     badge: "Enhanced"
   },
   {
@@ -3977,7 +3974,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1798 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(361),
     badge: "Enhanced"
   },
   {
@@ -3988,7 +3985,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3266 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(362),
     badge: "Basic"
   },
   {
@@ -3999,7 +3996,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3542 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(363),
     badge: "Basic"
   },
   {
@@ -4010,7 +4007,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1922 sq ft",
-    image: Modern,
+    image: getPropertyImageById(364),
     badge: "Basic"
   },
   {
@@ -4021,7 +4018,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "2856 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(365),
     badge: "Basic"
   },
   {
@@ -4032,7 +4029,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "2816 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(366),
     badge: "Premium"
   },
   {
@@ -4043,7 +4040,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3315 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(367),
     badge: "Premium"
   },
   {
@@ -4054,7 +4051,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1675 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(368),
     badge: "Premium"
   },
   {
@@ -4065,7 +4062,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "1185 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(369),
     badge: "Premium"
   },
   {
@@ -4076,7 +4073,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "3226 sq ft",
-    image: Modern,
+    image: getPropertyImageById(370),
     badge: "Enhanced"
   },
   {
@@ -4087,7 +4084,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1485 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(371),
     badge: "Basic"
   },
   {
@@ -4098,7 +4095,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "1127 sq ft",
-    image: Modern,
+    image: getPropertyImageById(372),
     badge: "Premium"
   },
   {
@@ -4109,7 +4106,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "1578 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(373),
     badge: "Premium"
   },
   {
@@ -4120,7 +4117,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "920 sq ft",
-    image: Modern,
+    image: getPropertyImageById(374),
     badge: "Premium"
   },
   {
@@ -4131,7 +4128,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "3843 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(375),
     badge: "Enhanced"
   },
   {
@@ -4142,7 +4139,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3639 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(376),
     badge: "Premium"
   },
   {
@@ -4153,7 +4150,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "3949 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(377),
     badge: "Premium"
   },
   {
@@ -4164,7 +4161,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "3386 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(378),
     badge: "Premium"
   },
   {
@@ -4175,7 +4172,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "1531 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(379),
     badge: "Premium"
   },
   {
@@ -4186,7 +4183,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "1400 sq ft",
-    image: Modern,
+    image: getPropertyImageById(380),
     badge: "Enhanced"
   },
   {
@@ -4197,7 +4194,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "1400 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(381),
     badge: "Basic"
   },
   {
@@ -4208,7 +4205,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "2394 sq ft",
-    image: Modern,
+    image: getPropertyImageById(382),
     badge: "Basic"
   },
   {
@@ -4219,7 +4216,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3273 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(383),
     badge: "Enhanced"
   },
   {
@@ -4230,7 +4227,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1405 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(384),
     badge: "Basic"
   },
   {
@@ -4241,7 +4238,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1578 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(385),
     badge: "Premium"
   },
   {
@@ -4252,7 +4249,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1615 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(386),
     badge: "Enhanced"
   },
   {
@@ -4263,7 +4260,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "963 sq ft",
-    image: Modern,
+    image: getPropertyImageById(387),
     badge: "Enhanced"
   },
   {
@@ -4274,7 +4271,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1757 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(388),
     badge: "Enhanced"
   },
   {
@@ -4285,7 +4282,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "1092 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(389),
     badge: "Basic"
   },
   {
@@ -4296,7 +4293,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "2803 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(390),
     badge: "Enhanced"
   },
   {
@@ -4307,7 +4304,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "1021 sq ft",
-    image: Modern,
+    image: getPropertyImageById(391),
     badge: "Enhanced"
   },
   {
@@ -4318,7 +4315,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "958 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(392),
     badge: "Enhanced"
   },
   {
@@ -4329,7 +4326,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3936 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(393),
     badge: "Enhanced"
   },
   {
@@ -4340,7 +4337,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "3124 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(394),
     badge: "Basic"
   },
   {
@@ -4351,7 +4348,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "2588 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(395),
     badge: "Enhanced"
   },
   {
@@ -4362,7 +4359,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "2635 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(396),
     badge: "Premium"
   },
   {
@@ -4373,7 +4370,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "2053 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(397),
     badge: "Premium"
   },
   {
@@ -4384,7 +4381,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "1649 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(398),
     badge: "Enhanced"
   },
   {
@@ -4395,7 +4392,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2306 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(399),
     badge: "Basic"
   },
   {
@@ -4406,7 +4403,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "2690 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(400),
     badge: "Basic"
   },
   {
@@ -4417,7 +4414,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "2756 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(401),
     badge: "Basic"
   },
   {
@@ -4428,7 +4425,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1601 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(402),
     badge: "Premium"
   },
   {
@@ -4439,7 +4436,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "1429 sq ft",
-    image: Modern,
+    image: getPropertyImageById(403),
     badge: "Premium"
   },
   {
@@ -4450,7 +4447,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2339 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(404),
     badge: "Enhanced"
   },
   {
@@ -4461,7 +4458,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "1589 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(405),
     badge: "Enhanced"
   },
   {
@@ -4472,7 +4469,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "2302 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(406),
     badge: "Enhanced"
   },
   {
@@ -4483,7 +4480,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "1894 sq ft",
-    image: Modern,
+    image: getPropertyImageById(407),
     badge: "Basic"
   },
   {
@@ -4494,7 +4491,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1803 sq ft",
-    image: Modern,
+    image: getPropertyImageById(408),
     badge: "Basic"
   },
   {
@@ -4505,7 +4502,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "3406 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(409),
     badge: "Enhanced"
   },
   {
@@ -4516,7 +4513,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "2219 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(410),
     badge: "Basic"
   },
   {
@@ -4527,7 +4524,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3235 sq ft",
-    image: Modern,
+    image: getPropertyImageById(411),
     badge: "Premium"
   },
   {
@@ -4538,7 +4535,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1205 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(412),
     badge: "Basic"
   },
   {
@@ -4549,7 +4546,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1742 sq ft",
-    image: Modern,
+    image: getPropertyImageById(413),
     badge: "Enhanced"
   },
   {
@@ -4560,7 +4557,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "3783 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(414),
     badge: "Enhanced"
   },
   {
@@ -4571,7 +4568,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "2158 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(415),
     badge: "Enhanced"
   },
   {
@@ -4582,7 +4579,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "3061 sq ft",
-    image: Modern,
+    image: getPropertyImageById(416),
     badge: "Basic"
   },
   {
@@ -4593,7 +4590,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "1058 sq ft",
-    image: Modern,
+    image: getPropertyImageById(417),
     badge: "Enhanced"
   },
   {
@@ -4604,7 +4601,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "1671 sq ft",
-    image: Modern,
+    image: getPropertyImageById(418),
     badge: "Basic"
   },
   {
@@ -4615,7 +4612,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "2082 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(419),
     badge: "Basic"
   },
   {
@@ -4626,7 +4623,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "3761 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(420),
     badge: "Enhanced"
   },
   {
@@ -4637,7 +4634,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "2195 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(421),
     badge: "Basic"
   },
   {
@@ -4648,7 +4645,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "2306 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(422),
     badge: "Enhanced"
   },
   {
@@ -4659,7 +4656,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2654 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(423),
     badge: "Basic"
   },
   {
@@ -4670,7 +4667,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "3113 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(424),
     badge: "Basic"
   },
   {
@@ -4681,7 +4678,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "2858 sq ft",
-    image: Modern,
+    image: getPropertyImageById(425),
     badge: "Basic"
   },
   {
@@ -4692,7 +4689,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3828 sq ft",
-    image: Modern,
+    image: getPropertyImageById(426),
     badge: "Premium"
   },
   {
@@ -4703,7 +4700,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3164 sq ft",
-    image: Modern,
+    image: getPropertyImageById(427),
     badge: "Premium"
   },
   {
@@ -4714,7 +4711,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "3770 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(428),
     badge: "Enhanced"
   },
   {
@@ -4725,7 +4722,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "2549 sq ft",
-    image: Modern,
+    image: getPropertyImageById(429),
     badge: "Premium"
   },
   {
@@ -4736,7 +4733,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "3673 sq ft",
-    image: Modern,
+    image: getPropertyImageById(430),
     badge: "Premium"
   },
   {
@@ -4747,7 +4744,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3226 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(431),
     badge: "Enhanced"
   },
   {
@@ -4758,7 +4755,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3222 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(432),
     badge: "Premium"
   },
   {
@@ -4769,7 +4766,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3600 sq ft",
-    image: Modern,
+    image: getPropertyImageById(433),
     badge: "Premium"
   },
   {
@@ -4780,7 +4777,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "1299 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(434),
     badge: "Enhanced"
   },
   {
@@ -4791,7 +4788,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3620 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(435),
     badge: "Premium"
   },
   {
@@ -4802,7 +4799,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1563 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(436),
     badge: "Premium"
   },
   {
@@ -4813,7 +4810,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3719 sq ft",
-    image: Modern,
+    image: getPropertyImageById(437),
     badge: "Basic"
   },
   {
@@ -4824,7 +4821,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "2303 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(438),
     badge: "Enhanced"
   },
   {
@@ -4835,7 +4832,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "3444 sq ft",
-    image: Modern,
+    image: getPropertyImageById(439),
     badge: "Basic"
   },
   {
@@ -4846,7 +4843,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "2251 sq ft",
-    image: Modern,
+    image: getPropertyImageById(440),
     badge: "Premium"
   },
   {
@@ -4857,7 +4854,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2379 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(441),
     badge: "Enhanced"
   },
   {
@@ -4868,7 +4865,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3926 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(442),
     badge: "Premium"
   },
   {
@@ -4879,7 +4876,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "3180 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(443),
     badge: "Basic"
   },
   {
@@ -4890,7 +4887,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "1",
     area: "3982 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(444),
     badge: "Basic"
   },
   {
@@ -4901,7 +4898,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1725 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(445),
     badge: "Premium"
   },
   {
@@ -4912,7 +4909,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2681 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(446),
     badge: "Basic"
   },
   {
@@ -4923,7 +4920,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "1517 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(447),
     badge: "Basic"
   },
   {
@@ -4934,7 +4931,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "1863 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(448),
     badge: "Premium"
   },
   {
@@ -4945,7 +4942,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "2043 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(449),
     badge: "Enhanced"
   },
   {
@@ -4956,7 +4953,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3915 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(450),
     badge: "Basic"
   },
   {
@@ -4967,7 +4964,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1659 sq ft",
-    image: Modern,
+    image: getPropertyImageById(451),
     badge: "Basic"
   },
   {
@@ -4978,7 +4975,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1140 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(452),
     badge: "Basic"
   },
   {
@@ -4989,7 +4986,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "1",
     area: "1762 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(453),
     badge: "Premium"
   },
   {
@@ -5000,7 +4997,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "1047 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(454),
     badge: "Premium"
   },
   {
@@ -5011,7 +5008,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "1512 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(455),
     badge: "Basic"
   },
   {
@@ -5022,7 +5019,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "3544 sq ft",
-    image: Modern,
+    image: getPropertyImageById(456),
     badge: "Basic"
   },
   {
@@ -5033,7 +5030,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "1528 sq ft",
-    image: Modern,
+    image: getPropertyImageById(457),
     badge: "Enhanced"
   },
   {
@@ -5044,7 +5041,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "3973 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(458),
     badge: "Basic"
   },
   {
@@ -5055,7 +5052,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2545 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(459),
     badge: "Premium"
   },
   {
@@ -5066,7 +5063,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "2718 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(460),
     badge: "Premium"
   },
   {
@@ -5077,7 +5074,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "3087 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(461),
     badge: "Enhanced"
   },
   {
@@ -5088,7 +5085,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1936 sq ft",
-    image: Modern,
+    image: getPropertyImageById(462),
     badge: "Premium"
   },
   {
@@ -5099,7 +5096,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "801 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(463),
     badge: "Premium"
   },
   {
@@ -5110,7 +5107,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "1071 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(464),
     badge: "Premium"
   },
   {
@@ -5121,7 +5118,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "1188 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(465),
     badge: "Enhanced"
   },
   {
@@ -5132,7 +5129,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "3060 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(466),
     badge: "Enhanced"
   },
   {
@@ -5143,7 +5140,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "3",
     area: "2729 sq ft",
-    image: Modern,
+    image: getPropertyImageById(467),
     badge: "Enhanced"
   },
   {
@@ -5154,7 +5151,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "2088 sq ft",
-    image: Modern,
+    image: getPropertyImageById(468),
     badge: "Premium"
   },
   {
@@ -5165,7 +5162,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1888 sq ft",
-    image: Modern,
+    image: getPropertyImageById(469),
     badge: "Premium"
   },
   {
@@ -5176,7 +5173,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "4",
     area: "906 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(470),
     badge: "Basic"
   },
   {
@@ -5187,7 +5184,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2158 sq ft",
-    image: Modern,
+    image: getPropertyImageById(471),
     badge: "Premium"
   },
   {
@@ -5198,7 +5195,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "4",
     area: "892 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(472),
     badge: "Enhanced"
   },
   {
@@ -5209,7 +5206,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "1889 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(473),
     badge: "Enhanced"
   },
   {
@@ -5220,7 +5217,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "2594 sq ft",
-    image: Modern,
+    image: getPropertyImageById(474),
     badge: "Basic"
   },
   {
@@ -5231,7 +5228,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "1860 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(475),
     badge: "Basic"
   },
   {
@@ -5242,7 +5239,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "3",
     area: "1095 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(476),
     badge: "Enhanced"
   },
   {
@@ -5253,7 +5250,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "3001 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(477),
     badge: "Premium"
   },
   {
@@ -5264,7 +5261,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "4",
     area: "2098 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(478),
     badge: "Enhanced"
   },
   {
@@ -5275,7 +5272,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "2316 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(479),
     badge: "Premium"
   },
   {
@@ -5286,7 +5283,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "3137 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(480),
     badge: "Basic"
   },
   {
@@ -5297,7 +5294,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "854 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(481),
     badge: "Basic"
   },
   {
@@ -5308,7 +5305,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "3719 sq ft",
-    image: Modern,
+    image: getPropertyImageById(482),
     badge: "Enhanced"
   },
   {
@@ -5319,7 +5316,7 @@ export const featuredProperties = [
     beds: "3",
     baths: "2",
     area: "3041 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(483),
     badge: "Enhanced"
   },
   {
@@ -5330,7 +5327,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "2269 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(484),
     badge: "Enhanced"
   },
   {
@@ -5341,7 +5338,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "1480 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(485),
     badge: "Premium"
   },
   {
@@ -5352,7 +5349,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "1",
     area: "881 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(486),
     badge: "Premium"
   },
   {
@@ -5363,7 +5360,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "2645 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(487),
     badge: "Basic"
   },
   {
@@ -5374,7 +5371,7 @@ export const featuredProperties = [
     beds: "5",
     baths: "2",
     area: "1265 sq ft",
-    image: Modern,
+    image: getPropertyImageById(488),
     badge: "Enhanced"
   },
   {
@@ -5385,7 +5382,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "1",
     area: "949 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(489),
     badge: "Enhanced"
   },
   {
@@ -5396,7 +5393,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "1",
     area: "2236 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(490),
     badge: "Basic"
   },
   {
@@ -5407,7 +5404,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "2",
     area: "3958 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(491),
     badge: "Enhanced"
   },
   {
@@ -5418,7 +5415,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "3",
     area: "3141 sq ft",
-    image: Modern,
+    image: getPropertyImageById(492),
     badge: "Enhanced"
   },
   {
@@ -5429,7 +5426,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "3",
     area: "892 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(493),
     badge: "Basic"
   },
   {
@@ -5440,7 +5437,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "1633 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(494),
     badge: "Premium"
   },
   {
@@ -5451,7 +5448,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2652 sq ft",
-    image: Waterfront,
+    image: getPropertyImageById(495),
     badge: "Premium"
   },
   {
@@ -5462,7 +5459,7 @@ export const featuredProperties = [
     beds: "1",
     baths: "2",
     area: "931 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(496),
     badge: "Premium"
   },
   {
@@ -5473,7 +5470,7 @@ export const featuredProperties = [
     beds: "2",
     baths: "4",
     area: "2420 sq ft",
-    image: Modern,
+    image: getPropertyImageById(497),
     badge: "Basic"
   },
   {
@@ -5484,7 +5481,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "2",
     area: "3358 sq ft",
-    image: Suburban,
+    image: getPropertyImageById(498),
     badge: "Basic"
   },
   {
@@ -5495,7 +5492,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "3",
     area: "802 sq ft",
-    image: Modern,
+    image: getPropertyImageById(499),
     badge: "Premium"
   },
   {
@@ -5506,172 +5503,7 @@ export const featuredProperties = [
     beds: "4",
     baths: "4",
     area: "2311 sq ft",
-    image: Mountain,
-    badge: "Premium"
-  },
-  {
-    id: 501,
-    title: "Urban Studio Flat",
-    location: "893 Urban St, Chicago, IL",
-    price: "$426,000",
-    beds: "5",
-    baths: "2",
-    area: "3099 sq ft",
-    image: Suburban,
-    badge: "Premium"
-  },
-  {
-    id: 502,
-    title: "Urban Studio Flat",
-    location: "955 Urban St, New York, NY",
-    price: "$1,164,000",
-    beds: "2",
-    baths: "1",
-    area: "1851 sq ft",
-    image: Modern,
-    badge: "Premium"
-  },
-  {
-    id: 503,
-    title: "Modern Downtown Apartment",
-    location: "400 Modern St, Chicago, IL",
-    price: "$185,000",
-    beds: "1",
-    baths: "3",
-    area: "3085 sq ft",
-    image: Mountain,
-    badge: "Premium"
-  },
-  {
-    id: 504,
-    title: "Luxury Penthouse Suite",
-    location: "511 Luxury St, Seattle, WA",
-    price: "$458,000",
-    beds: "2",
-    baths: "4",
-    area: "1581 sq ft",
-    image: Suburban,
-    badge: "Enhanced"
-  },
-  {
-    id: 505,
-    title: "Rustic Ranch House",
-    location: "631 Rustic St, Chicago, IL",
-    price: "$693,000",
-    beds: "2",
-    baths: "2",
-    area: "1943 sq ft",
-    image: Suburban,
-    badge: "Premium"
-  },
-  {
-    id: 506,
-    title: "Waterfront Luxury Villa",
-    location: "757 Waterfront St, New York, NY",
-    price: "$373,000",
-    beds: "5",
-    baths: "4",
-    area: "3767 sq ft",
-    image: Modern,
-    badge: "Premium"
-  },
-  {
-    id: 507,
-    title: "Mountain View Cottage",
-    location: "713 Mountain St, Miami, FL",
-    price: "$601,000",
-    beds: "5",
-    baths: "2",
-    area: "3524 sq ft",
-    image: Mountain,
-    badge: "Basic"
-  },
-  {
-    id: 508,
-    title: "Rustic Ranch House",
-    location: "112 Rustic St, Miami, FL",
-    price: "$416,000",
-    beds: "3",
-    baths: "2",
-    area: "996 sq ft",
-    image: Modern,
-    badge: "Basic"
-  },
-  {
-    id: 509,
-    title: "Beachside Bungalow",
-    location: "636 Beachside St, Boston, MA",
-    price: "$565,000",
-    beds: "1",
-    baths: "1",
-    area: "3537 sq ft",
-    image: Mountain,
-    badge: "Basic"
-  },
-  {
-    id: 510,
-    title: "Urban Studio Flat",
-    location: "584 Urban St, Seattle, WA",
-    price: "$772,000",
-    beds: "5",
-    baths: "1",
-    area: "2268 sq ft",
-    image: Modern,
-    badge: "Enhanced"
-  },
-  {
-    id: 511,
-    title: "Mountain View Cottage",
-    location: "502 Mountain St, Miami, FL",
-    price: "$616,000",
-    beds: "5",
-    baths: "3",
-    area: "3059 sq ft",
-    image: Suburban,
-    badge: "Basic"
-  },
-  {
-    id: 512,
-    title: "Luxury Penthouse Suite",
-    location: "891 Luxury St, Los Angeles, CA",
-    price: "$1,223,000",
-    beds: "5",
-    baths: "3",
-    area: "803 sq ft",
-    image: Modern,
-    badge: "Premium"
-  },
-  {
-    id: 513,
-    title: "Suburban Family Home",
-    location: "441 Suburban St, Seattle, WA",
-    price: "$1,231,000",
-    beds: "5",
-    baths: "4",
-    area: "3266 sq ft",
-    image: Waterfront,
-    badge: "Premium"
-  },
-  {
-    id: 514,
-    title: "Luxury Penthouse Suite",
-    location: "573 Luxury St, Austin, TX",
-    price: "$347,000",
-    beds: "3",
-    baths: "4",
-    area: "1312 sq ft",
-    image: Modern,
-    badge: "Enhanced"
-  },
-  {
-    id: 515,
-    title: "Suburban Family Home",
-    location: "166 Suburban St, Los Angeles, CA",
-    price: "$1,246,000",
-    beds: "2",
-    baths: "4",
-    area: "3337 sq ft",
-    image: Mountain,
+    image: getPropertyImageById(500),
     badge: "Premium"
   }
 ];

@@ -7,19 +7,27 @@ function PropertyCard({ property }) {
   if (!property) return null;
   
   const navigate = useNavigate();
-  
-  // Determine badge class
   const badgeClass = property.badge?.toLowerCase() || 'standard';
-  
-  // Optional: Handle favoriting/saving (can be implemented with state later)
   const isSaved = property.saved || false;
+  const getBeds = () => {
+    if (property.details?.beds) {
+      return property.details.beds.split(' ')[0]; 
+    }
+    return property.beds || '0';
+  };
   
-  // Handle potentially missing property values with defaults
-  const beds = property.beds || '0';
-  const baths = property.baths || '0';
-  
-  // Safely extract square footage
+  const getBaths = () => {
+    if (property.details?.baths) {
+      return property.details.baths.split(' ')[0]; 
+    }
+    return property.baths || '0';
+  };
   const getAreaValue = () => {
+    if (property.details?.area) {
+      const areaStr = property.details.area;
+      return areaStr.split(' ')[0]; 
+    }
+    
     if (!property.area) return '0';
     
     // If area is a string that contains spaces (like "1500 sq ft"), extract the number
@@ -61,7 +69,7 @@ function PropertyCard({ property }) {
           <div className={`property-badge ${badgeClass}`}>{property.badge}</div>
         )}
         
-        {/* Status (For Sale, For Rent, Sold) */}
+        {}
         {property.status && (
           <div className={`property-status status-${property.status.toLowerCase().replace(/\s+/g, '-')}`}>
             {property.status}
@@ -87,11 +95,11 @@ function PropertyCard({ property }) {
         
         <div className="property-features">
           <div className="feature">
-            <span className="feature-value">{beds}</span>
+            <span className="feature-value">{getBeds()}</span>
             <span className="feature-label">Beds</span>
           </div>
           <div className="feature">
-            <span className="feature-value">{baths}</span>
+            <span className="feature-value">{getBaths()}</span>
             <span className="feature-label">Baths</span>
           </div>
           <div className="feature">

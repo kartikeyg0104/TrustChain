@@ -10,11 +10,13 @@ import AgentProfile from './components/AgentProfile/AgentProfile';
 import Notifications from './components/Notifications/Notifications';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
