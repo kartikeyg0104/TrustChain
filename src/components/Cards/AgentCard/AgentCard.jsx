@@ -37,7 +37,7 @@ function AgentCard({ agent }) {
         <button className="contact-button primary">
           <FaEnvelope /> Message
         </button>
-        <button className="contact-button secondary">
+        <button className="contact-button secondary" style={{color: '#1a2b50', backgroundColor: '#f0f0f0'}}>
           <FaPhoneAlt /> Call
         </button>
       </div>
