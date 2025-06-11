@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 function Footer() {
@@ -16,6 +17,25 @@ function Footer() {
             communications, and engagement 
             metrics.
           </p>
+          
+          {/* Add social icons here */}
+          <div className="social-icons">
+            <a href="https://github.com" className="social-icon-link" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="social-icon-github" />
+            </a>
+            <a href="https://linkedin.com" className="social-icon-link" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="social-icon-linkedin" />
+            </a>
+            <a href="https://twitter.com" className="social-icon-link" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="social-icon-twitter" />
+            </a>
+            <a href="https://facebook.com" className="social-icon-link" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="social-icon-facebook" />
+            </a>
+            <a href="https://instagram.com" className="social-icon-link" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="social-icon-instagram" />
+            </a>
+          </div>
         </div>
 
         <div className="footer-links">

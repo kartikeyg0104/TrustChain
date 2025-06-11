@@ -137,8 +137,10 @@ function Home() {
           estate market.
         </p>
         <div className="feature-cards">
-          {trustFeatures.map(feature => (
-            <FeatureCard key={feature.id} feature={feature} />
+          {trustFeatures.map((feature, index) => (
+            <div className="feature-card-container" key={feature.id}>
+              <FeatureCard feature={feature} />
+            </div>
           ))}
         </div>
       </section>

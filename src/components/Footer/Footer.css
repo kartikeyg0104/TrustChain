@@ -94,6 +94,113 @@
   margin-top: 20px;
 }
 
+/* Social Media Icons - Fixed */
+.social-icons {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+  justify-content: flex-start; /* Align to the left like the footer description */
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon size fix */
+.social-icon-link svg {
+  font-size: 1.5rem;
+}
+
+/* Shine effect on hover */
+.social-icon-link::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.social-icon-link:hover::before {
+  opacity: 1;
+  top: -50%;
+  left: -50%;
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Enhanced hover effect */
+.social-icon-link:hover {
+  transform: translateY(-8px) scale(1.15);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Subtle bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.social-icon-link:hover svg {
+  animation: bounce 1s infinite;
+}
+
+/* Different colors for each social platform */
+.social-icon-github {
+  color: #0000FF !important; /* Blue - using !important to override any default icon colors */
+}
+
+.social-icon-linkedin {
+  color: #9400D3 !important; /* Purple */
+}
+
+.social-icon-twitter {
+  color: #1DA1F2 !important; /* Blue */
+}
+
+.social-icon-facebook {
+  color: #4267B2 !important; /* Blue */
+}
+
+.social-icon-instagram {
+  color: #C13584 !important; /* Purple-pink */
+}
+
+.social-icon-link:hover .social-icon-github,
+.social-icon-link:hover .social-icon-linkedin,
+.social-icon-link:hover .social-icon-twitter,
+.social-icon-link:hover .social-icon-facebook,
+.social-icon-link:hover .social-icon-instagram {
+  color: #ffffff !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
@@ -109,6 +216,11 @@
   .footer-column {
     flex: 1 0 45%;
     margin-bottom: 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    width: 100%;
   }
 }
 

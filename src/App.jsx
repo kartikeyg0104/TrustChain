@@ -9,7 +9,7 @@ import Agents from './components/Agents/Agents';
 import AgentProfile from './components/AgentProfile/AgentProfile';
 import Notifications from './components/Notifications/Notifications';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer'; // Make sure this import uses the new Footer
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './App.css';
 
