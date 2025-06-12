@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
-import './Navbar.css';
+import '../Styles/Navbar.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);

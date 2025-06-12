@@ -9,7 +9,7 @@
   color: white;
   padding: 60px 20px;
   text-align: center;
-  background-image: linear-gradient(rgba(26, 57, 105, 0.9), rgba(26, 57, 105, 0.9)), url('../../assets/Aboutpic/building.jpg');
+  background-image: linear-gradient(rgba(26, 57, 105, 0.9), rgba(26, 57, 105, 0.9)), url('../assets/Aboutpic/building.jpg');
   background-size: cover;
   background-position: center;
   position: relative;

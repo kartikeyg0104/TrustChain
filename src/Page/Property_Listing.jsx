@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaSearch, FaTh, FaThList, FaSort, FaFilter } from 'react-icons/fa';
-import PropertyCard from '../Cards/PropertyCard/PropertyCard';
-import { featuredProperties } from '../../data/properties';
-import './Property_Listing.css';
+import PropertyCard from './PropertyCard';
+import { featuredProperties } from '../data/properties';
+import '../Styles/Property_Listing.css';
 
 function Property_Listing() {
   const [properties, setProperties] = useState(featuredProperties || []);

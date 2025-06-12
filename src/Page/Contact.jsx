@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
-import './Contact.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import '../Styles/Contact.css';
 
 function Contact() {
   return (

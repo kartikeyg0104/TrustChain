@@ -1,4 +1,4 @@
-import { getPropertyImageById } from '../utils/imageUtils';
+import { getPropertyImageById } from './imageUtils';
 
 export const featuredProperties = [
   {

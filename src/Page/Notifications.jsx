@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheck, FaTrash, FaRegBell, FaFilter } from 'react-icons/fa';
-import './Notifications.css';
+import '../Styles/Notifications.css';
 
 function Notifications() {
   const [notifications, setNotifications] = useState([

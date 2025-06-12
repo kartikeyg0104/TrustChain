@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { featuredProperties } from '../../data/properties';
-import './Property_Detail.css';
+import { featuredProperties } from '../data/properties';
+import '../Styles/Property_Detail.css';
 
 function Property_Detail() {
   const { id } = useParams();

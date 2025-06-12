@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { FaSearch, FaFilter, FaTh, FaThList } from 'react-icons/fa';
-import AgentCard from '../Cards/AgentCard/AgentCard';
-import { topAgents } from '../../data/agents';
-import './Agents.css';
+import AgentCard from './AgentCard';
+import { topAgents } from '../data/agents';
+import '../Styles/Agents.css';
 
 function Agents() {
   const [agents, setAgents] = useState([]);

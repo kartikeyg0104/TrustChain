@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
-import './About.css';
-import MissionImage from '../../assets/Aboutpic/Mission.jpeg';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import '../Styles/About.css';
+import MissionImage from '../assets/Aboutpic/Mission.jpeg';
 
 function About() {
   return (

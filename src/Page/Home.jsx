@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropertyCard from '../Cards/PropertyCard/PropertyCard';
-import FeatureCard from '../Cards/FeatureCard/FeatureCard';
-import AgentCard from '../Cards/AgentCard/AgentCard';
-import TestimonialCard from '../Cards/TestimonialCard/TestimonialCard';
-import { featuredProperties } from '../../data/properties';
-import { trustFeatures } from '../../data/features';
-import { topAgents } from '../../data/agents';
-import { testimonials } from '../../data/testimonials';
-import Promote from '../../assets/Homepics/Promote.png';
-import Promise from '../../assets/Homepics/Promise.jpg';
-import './Home.css';
+import PropertyCard from './PropertyCard';
+import FeatureCard from './FeatureCard';
+import AgentCard from './AgentCard';
+import TestimonialCard from './TestimonialCard';
+import { featuredProperties } from '../data/properties';
+import { trustFeatures } from '../data/features';
+import { topAgents } from '../data/agents';
+import { testimonials } from '../data/testimonials';
+import Promote from '../assets/Homepics/Promote.png';
+import Promise from '../assets/Homepics/Promise.jpg';
+import '../Styles/Home.css';
 
 function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaStar } from 'react-icons/fa';
-import './AgentCard.css';
+import '../Styles/AgentCard.css';
 
 
 function AgentCard({ agent }) {

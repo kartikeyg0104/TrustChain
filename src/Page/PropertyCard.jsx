@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaMapMarkerAlt, FaRegHeart, FaHeart, FaBed, FaBath, FaRulerCombined } from 'react-icons/fa';
-import './PropertyCard.css';
+import '../Styles/PropertyCard.css';
 
 function PropertyCard({ property }) {
   if (!property) return null;

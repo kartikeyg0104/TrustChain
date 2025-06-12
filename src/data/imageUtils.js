@@ -19,7 +19,6 @@ export const getPropertyImageById = (id) => {
     imageCache[id] = imageUrl;
     return imageUrl;
   } catch (error) {
-    // Use a loop to select fallback image
     let fallbackImage;
     for (let i = 0; i < fallbackImages.length; i++) {
       if (id % fallbackImages.length === i) {

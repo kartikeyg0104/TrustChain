@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaStar, FaCheckCircle, FaMapMarkerAlt, FaBuilding, FaUserCheck } from 'react-icons/fa';
-import PropertyCard from '../Cards/PropertyCard/PropertyCard';
-import { topAgents } from '../../data/agents';
-import { getPropertiesByAgent } from '../../data/properties';
-import './AgentProfile.css';
+import PropertyCard from './PropertyCard';
+import { topAgents } from '../data/agents';
+import { getPropertiesByAgent } from '../data/properties';
+import '../Styles/AgentProfile.css';
 
 function AgentProfile() {
   const { id } = useParams();
