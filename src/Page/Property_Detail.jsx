@@ -56,7 +56,7 @@ function Property_Detail() {
         await navigator.clipboard.writeText(window.location.href);
         alert('Property link copied to clipboard!');
       }
-    } catch (error) {
+    } catch {
       // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = window.location.href;
@@ -83,7 +83,7 @@ function Property_Detail() {
     
     try {
       window.location.href = mailtoLink;
-    } catch (error) {
+    } catch {
       alert(`Contact the agent at: ${agentEmail}`);
     }
   };

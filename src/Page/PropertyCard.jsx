@@ -5,10 +5,10 @@ import { addNotification } from '../data/notifications';
 import '../Styles/PropertyCard.css';
 
 function PropertyCard({ property }) {
-  if (!property) return null;
-  
   const navigate = useNavigate();
-  const [isSaved, setIsSaved] = useState(property.saved || false);
+  const [isSaved, setIsSaved] = useState(property?.saved || false);
+  
+  if (!property) return null;
   const badgeClass = property.badge?.toLowerCase() || 'standard';
   
   const getBeds = () => {

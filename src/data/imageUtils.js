@@ -18,7 +18,7 @@ export const getPropertyImageById = (id) => {
     const imageUrl = new URL(`../assets/Homepics/image_${id}.jpg`, import.meta.url).href;
     imageCache[id] = imageUrl;
     return imageUrl;
-  } catch (error) {
+  } catch {
     let fallbackImage;
     for (let i = 0; i < fallbackImages.length; i++) {
       if (id % fallbackImages.length === i) {

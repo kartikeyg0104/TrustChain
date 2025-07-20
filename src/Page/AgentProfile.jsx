@@ -50,7 +50,7 @@ function AgentProfile() {
       
       try {
         window.location.href = mailtoLink;
-      } catch (error) {
+      } catch {
         // Fallback: show email in alert
         alert(`Contact ${agent.name} at: ${agentEmail}`);
       }
@@ -60,7 +60,7 @@ function AgentProfile() {
       
       try {
         window.location.href = `tel:${phoneNumber}`;
-      } catch (error) {
+      } catch {
         // Fallback: show phone number in alert
         alert(`Call ${agent.name} at: ${phoneNumber}`);
       }
