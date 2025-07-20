@@ -89,18 +89,20 @@
   font-size: 2.25rem;
   margin: 0 0 8px 0;
   font-weight: bold;
+  color: #ffffff; /* Ensure white text */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Add subtle shadow for better readability */
 }
 
 .agent-title {
   font-size: 1.1rem;
   margin: 0 0 4px 0;
-  opacity: 0.9;
+  color: #f1f5f9; /* Light gray instead of opacity */
 }
 
 .agent-company {
   font-size: 1rem;
   margin: 0 0 20px 0;
-  opacity: 0.8;
+  color: #cbd5e1; /* Light gray instead of opacity */
 }
 
 .agent-stats {
@@ -117,11 +119,15 @@
 .stat-value {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #ffffff; /* Changed from default to white for better visibility */
 }
 
 .stat-label {
   font-size: 0.85rem;
-  opacity: 0.8;
+  color: #e2e8f0; /* Changed from opacity 0.8 to light gray for better readability */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
 }
 
 .agent-contact-buttons {

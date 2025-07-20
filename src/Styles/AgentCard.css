@@ -1,167 +1,93 @@
 .agent-card {
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  padding: 30px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  z-index: 1;
-  border: 1px solid rgba(226, 232, 240, 0.5);
-}
-
-.agent-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(135deg, #1a2b50, #2c3e50);
-  z-index: -1;
-  transition: all 0.4s ease;
+  border: 1px solid #e2e8f0;
 }
 
 .agent-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.agent-card:hover::before {
-  height: 140px;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .agent-avatar {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  background: linear-gradient(135deg, #1a2b50, #2c3e50);
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
-  border: 5px solid white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 2;
-  transition: all 0.4s ease;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .agent-card:hover .agent-avatar {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .agent-card h3 {
-  font-size: 1.6rem;
-  color: #f7f7f7;
+  font-size: 1.3rem;
+  color: #1a2b50;
   margin: 0 0 5px;
   font-weight: 700;
-  position: relative;
-  display: inline-block;
-}
-
-.agent-card h3::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background: linear-gradient(90deg, #f39c12, #e74c3c);
-  border-radius: 3px;
 }
 
 .agent-title {
-  font-size: 1rem;
-  color: #718096;
-  margin: 15px 0 5px;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0 0 5px;
   font-weight: 500;
 }
 
 .agent-company {
-  font-size: 0.9rem;
-  color: #a0aec0;
-  margin-bottom: 25px;
-  font-weight: 500;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0 0 20px;
 }
 
 .badge {
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-  overflow: hidden;
-  display: inline-flex;
 }
 
 .badge.premium {
-  background: linear-gradient(135deg, rgba(243, 156, 18, 0.2), rgba(231, 76, 60, 0.2));
-  color: #e74c3c;
-}
-
-.badge.premium::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  transition: all 1.2s ease;
-}
-
-.agent-card:hover .badge.premium::before {
-  left: 100%;
+  background: #d4af37;
+  color: white;
 }
 
 .badge.enhanced {
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(41, 128, 185, 0.2));
-  color: #3498db;
+  background: #3498db;
+  color: white;
 }
 
 .badge.basic {
-  background: linear-gradient(135deg, rgba(52, 73, 94, 0.2), rgba(44, 62, 80, 0.2));
-  color: #2c3e50;
+  background: #6b7280;
+  color: white;
 }
 
 .agent-stats {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 20px 0 25px;
+  margin: 15px 0 20px;
   padding: 15px 0;
-  position: relative;
-}
-
-.agent-stats::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -30px;
-  right: -30px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.7), transparent);
-}
-
-.agent-stats::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -30px;
-  right: -30px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.7), transparent);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .stat {
@@ -171,7 +97,7 @@
 }
 
 .stat-value {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #1a2b50;
   margin-bottom: 5px;
@@ -182,92 +108,89 @@
 
 .rating-star {
   color: #f39c12;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
 }
 
 .stat-label {
-  font-size: 0.8rem;
-  color: #718096;
+  font-size: 0.7rem;
+  color: #94a3b8;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .agent-actions {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .contact-button {
   flex: 1;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  transition: all 0.4s ease;
+  gap: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   border: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%);
+}
+
+.contact-button:active::before {
+  width: 300px;
+  height: 300px;
 }
 
 .contact-button.primary {
-  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  background: linear-gradient(135deg, #1a2b50, #2c3e50);
   color: white;
-  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 2px 5px rgba(26, 43, 80, 0.2);
 }
 
 .contact-button.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+  background: linear-gradient(135deg, #1e325d, #344b60);
+  box-shadow: 0 4px 8px rgba(26, 43, 80, 0.3);
+  transform: translateY(-1px);
 }
 
 .contact-button.secondary {
-  background: transparent;
-  border: 1px solid #1a2b50;
+  background-color: #f8fafc;
   color: #1a2b50;
+  border: 1px solid #e2e8f0;
 }
 
 .contact-button.secondary:hover {
-  background: rgba(26, 43, 80, 0.1);
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
 }
 
 .view-profile-link {
   color: #1a2b50;
   font-weight: 600;
   text-decoration: none;
-  position: relative;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-}
-
-.view-profile-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #f39c12, #e74c3c);
-  transition: width 0.3s ease;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .view-profile-link:hover {
-  color: #e74c3c;
-}
-
-.view-profile-link:hover::after {
-  width: 100%;
+  color: #3182ce;
 }
 
 /* Add spacing to card wrapper */
@@ -470,6 +393,26 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%);
+}
+
+.contact-button:active::before {
+  width: 300px;
+  height: 300px;
 }
 
 .contact-button.primary {
@@ -481,6 +424,7 @@
 .contact-button.primary:hover {
   background: linear-gradient(135deg, #1e325d, #344b60);
   box-shadow: 0 4px 8px rgba(26, 43, 80, 0.3);
+  transform: translateY(-1px);
 }
 
 .contact-button.secondary {
@@ -492,6 +436,30 @@
 .contact-button.secondary:hover {
   background-color: #f1f5f9;
   border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* Add loading state for contact buttons */
+.contact-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.contact-button.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .view-profile-link {

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
+import { getUnreadCount, getCurrentNotifications } from '../data/notifications';
 import '../Styles/Navbar.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
   const location = useLocation();
   
   // Handle scroll effect
@@ -20,6 +22,22 @@ function Navbar() {
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Update notification count
+  useEffect(() => {
+    const updateNotificationCount = () => {
+      const notifications = getCurrentNotifications();
+      setUnreadCount(getUnreadCount(notifications));
+    };
+
+    // Initial load
+    updateNotificationCount();
+
+    // Update every second to catch new notifications
+    const interval = setInterval(updateNotificationCount, 1000);
+    
+    return () => clearInterval(interval);
   }, []);
 
   // Check if link is active
@@ -74,7 +92,9 @@ function Navbar() {
           <div className="notification-container">
             <Link to="/notifications">
               <FaBell className="notification-icon" />
-              <span className="notification-badge">3</span>
+              {unreadCount > 0 && (
+                <span className="notification-badge">{unreadCount}</span>
+              )}
             </Link>
           </div>
           

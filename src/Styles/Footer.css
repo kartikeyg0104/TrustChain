@@ -111,9 +111,7 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Icon size fix */
@@ -121,55 +119,9 @@
   font-size: 1.5rem;
 }
 
-/* Shine effect on hover */
-.social-icon-link::before {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-  transition: all 0.5s ease;
-  opacity: 0;
-}
-
-.social-icon-link:hover::before {
-  opacity: 1;
-  top: -50%;
-  left: -50%;
-  animation: shine 1.5s infinite;
-}
-
-@keyframes shine {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
-
-/* Enhanced hover effect */
 .social-icon-link:hover {
-  transform: translateY(-8px) scale(1.15);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
   background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Subtle bounce animation */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.social-icon-link:hover svg {
-  animation: bounce 1s infinite;
 }
 
 /* Different colors for each social platform */

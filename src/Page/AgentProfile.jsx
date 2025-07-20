@@ -4,6 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaStar, FaCheckCircle, FaMapMarkerAlt, FaBuildi
 import PropertyCard from './PropertyCard';
 import { topAgents } from '../data/agents';
 import { getPropertiesByAgent } from '../data/properties';
+import { addNotification } from '../data/notifications';
 import '../Styles/AgentProfile.css';
 
 function AgentProfile() {
@@ -20,6 +21,12 @@ function AgentProfile() {
     if (foundAgent) {
       setAgent(foundAgent);
       
+      // Generate notification for viewing agent profile
+      addNotification('agent_viewed', {
+        agentName: foundAgent.name,
+        agentId: foundAgent.id
+      });
+      
       // Get properties associated with this agent
       const properties = getPropertiesByAgent(id, 6);
       setAgentProperties(properties);
@@ -27,6 +34,38 @@ function AgentProfile() {
     
     setLoading(false);
   }, [id]);
+
+  const handleContactAgent = (type) => {
+    addNotification('agent_contacted', {
+      agentName: agent.name,
+      agentId: agent.id
+    });
+    
+    if (type === 'email') {
+      // Open email client with pre-filled information
+      const subject = `Real Estate Inquiry - ${agent.name}`;
+      const body = `Hello ${agent.name},\n\nI found your profile on TrustChain and I'm interested in your real estate services. I would like to discuss:\n\n- Property buying/selling\n- Market consultation\n- Property viewing\n\nPlease let me know your availability.\n\nBest regards`;
+      const agentEmail = `${agent.name.toLowerCase().replace(' ', '.')}@${agent.company.toLowerCase().replace(/\s+/g, '')}.com`;
+      const mailtoLink = `mailto:${agentEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      try {
+        window.location.href = mailtoLink;
+      } catch (error) {
+        // Fallback: show email in alert
+        alert(`Contact ${agent.name} at: ${agentEmail}`);
+      }
+    } else if (type === 'phone') {
+      // Generate a phone number based on agent ID (in real app, this would come from database)
+      const phoneNumber = `+1-555-${String(agent.id).padStart(4, '0')}`;
+      
+      try {
+        window.location.href = `tel:${phoneNumber}`;
+      } catch (error) {
+        // Fallback: show phone number in alert
+        alert(`Call ${agent.name} at: ${phoneNumber}`);
+      }
+    }
+  };
 
   if (loading) {
     return <div className="loading-container">Loading agent profile...</div>;
@@ -68,10 +107,18 @@ function AgentProfile() {
                 </div>
                 
                 <div className="agent-contact-buttons">
-                  <button className="contact-button primary">
+                  <button 
+                    className="contact-button primary"
+                    onClick={() => handleContactAgent('email')}
+                    title="Send email to agent"
+                  >
                     <FaEnvelope /> Message
                   </button>
-                  <button className="contact-button secondary">
+                  <button 
+                    className="contact-button secondary"
+                    onClick={() => handleContactAgent('phone')}
+                    title="Call agent"
+                  >
                     <FaPhoneAlt /> Call
                   </button>
                 </div>

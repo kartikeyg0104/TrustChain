@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaMapMarkerAlt, FaRegHeart, FaHeart, FaBed, FaBath, FaRulerCombined } from 'react-icons/fa';
+import { addNotification } from '../data/notifications';
 import '../Styles/PropertyCard.css';
 
 function PropertyCard({ property }) {
   if (!property) return null;
   
   const navigate = useNavigate();
+  const [isSaved, setIsSaved] = useState(property.saved || false);
   const badgeClass = property.badge?.toLowerCase() || 'standard';
-  const isSaved = property.saved || false;
+  
   const getBeds = () => {
     if (property.details?.beds) {
       return property.details.beds.split(' ')[0]; 
@@ -55,8 +57,16 @@ function PropertyCard({ property }) {
   // Handle save button click
   const handleSaveClick = (e) => {
     e.stopPropagation(); // Prevent card click from firing
-    // Implement save functionality here
-    console.log('Save property:', property.id);
+    
+    setIsSaved(!isSaved);
+    
+    if (!isSaved) {
+      // Generate notification for saving property
+      addNotification('property_liked', {
+        propertyTitle: property.title,
+        propertyId: property.id
+      });
+    }
   };
   
   return (

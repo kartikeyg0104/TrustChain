@@ -1,86 +1,86 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaCheck, FaTrash, FaRegBell, FaFilter } from 'react-icons/fa';
+import { 
+  getCurrentNotifications,
+  getUnreadCount,
+  filterNotifications,
+  markAsRead,
+  markAllAsRead,
+  deleteNotification,
+  initializeNotifications
+} from '../data/notifications';
 import '../Styles/Notifications.css';
 
 function Notifications() {
-  const [notifications, setNotifications] = useState([
-    {
-      id: 1,
-      type: 'property',
-      title: 'New Property Verification',
-      message: 'Your property at 123 Main St has been successfully verified.',
-      time: '2 hours ago',
-      read: false,
-      icon: '🏠'
-    },
-    {
-      id: 2,
-      type: 'transaction',
-      title: 'Transaction Update',
-      message: 'Your offer for Mountain View Cottage has been accepted.',
-      time: '1 day ago',
-      read: false,
-      icon: '📝'
-    },
-    {
-      id: 3,
-      type: 'alert',
-      title: 'Price Drop Alert',
-      message: 'A property on your watchlist has dropped in price by 5%.',
-      time: '2 days ago',
-      read: false,
-      icon: '💰'
-    },
-    {
-      id: 4,
-      type: 'system',
-      title: 'System Update',
-      message: 'We\'ve updated our terms of service. Please review the changes.',
-      time: '1 week ago',
-      read: true,
-      icon: '⚙️'
-    },
-    {
-      id: 5,
-      type: 'transaction',
-      title: 'Document Signed',
-      message: 'Closing documents for 456 Oak Ave have been signed by all parties.',
-      time: '1 week ago',
-      read: true,
-      icon: '✍️'
-    }
-  ]);
-
+  const [notifications, setNotifications] = useState([]);
   const [filter, setFilter] = useState('all');
+  const navigate = useNavigate();
   
-  const markAsRead = (id) => {
-    setNotifications(notifications.map(notif => 
-      notif.id === id ? {...notif, read: true} : notif
-    ));
+  // Initialize notifications on component mount
+  useEffect(() => {
+    initializeNotifications();
+    setNotifications(getCurrentNotifications());
+  }, []);
+  
+  const handleMarkAsRead = (id) => {
+    const updated = markAsRead(notifications, id);
+    setNotifications(updated);
   };
   
-  const markAllAsRead = () => {
-    setNotifications(notifications.map(notif => ({...notif, read: true})));
+  const handleMarkAllAsRead = () => {
+    const updated = markAllAsRead(notifications);
+    setNotifications(updated);
   };
   
-  const deleteNotification = (id) => {
-    setNotifications(notifications.filter(notif => notif.id !== id));
+  const handleDeleteNotification = (id) => {
+    const updated = deleteNotification(notifications, id);
+    setNotifications(updated);
+  };
+
+  const handleNotificationClick = (notification) => {
+    // Mark as read when clicked
+    if (!notification.read) {
+      handleMarkAsRead(notification.id);
+    }
+    
+    // Navigate to related page if actionUrl exists
+    if (notification.actionUrl) {
+      navigate(notification.actionUrl);
+    }
   };
   
-  const filteredNotifications = filter === 'all' 
-    ? notifications 
-    : filter === 'unread' 
-      ? notifications.filter(notif => !notif.read)
-      : notifications.filter(notif => notif.type === filter);
-  
-  const unreadCount = notifications.filter(notif => !notif.read).length;
+  const filteredNotifications = filterNotifications(notifications, filter);
+  const unreadCount = getUnreadCount(notifications);
+
+
+  useEffect(() => {
+    document.title = unreadCount > 0 
+      ? `(${unreadCount}) Notifications - TrustChain` 
+      : 'Notifications - TrustChain';
+    
+    return () => {
+      document.title = 'TrustChain';
+    };
+  }, [unreadCount]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentNotifications = getCurrentNotifications();
+      if (currentNotifications.length !== notifications.length) {
+        setNotifications(currentNotifications);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [notifications.length]);
 
   return (
     <div className="notifications-page">
       <div className="notifications-header">
         <div className="container">
           <h1>Notifications</h1>
-          <p>Stay updated with your properties, transactions, and more</p>
+          <p>Your activity-based notifications will appear here</p>
         </div>
       </div>
       
@@ -94,9 +94,11 @@ function Notifications() {
           </div>
           
           <div className="notifications-actions">
-            <button className="mark-all-btn" onClick={markAllAsRead}>
-              Mark All as Read
-            </button>
+            {unreadCount > 0 && (
+              <button className="mark-all-btn" onClick={handleMarkAllAsRead}>
+                Mark All as Read
+              </button>
+            )}
             
             <div className="filter-dropdown">
               <button className="filter-btn">
@@ -149,14 +151,21 @@ function Notifications() {
           {filteredNotifications.length === 0 ? (
             <div className="no-notifications">
               <div className="empty-icon">🔔</div>
-              <h3>No notifications</h3>
-              <p>You're all caught up! We'll notify you when there's something new.</p>
+              <h3>No notifications yet</h3>
+              <p>
+                {filter === 'unread' 
+                  ? "You're all caught up! No unread notifications."
+                  : "Start exploring properties and interacting with agents to receive notifications about your activity."
+                }
+              </p>
             </div>
           ) : (
             filteredNotifications.map(notification => (
               <div 
                 key={notification.id} 
                 className={`notification-item ${notification.read ? 'read' : 'unread'}`}
+                onClick={() => handleNotificationClick(notification)}
+                style={{ cursor: notification.actionUrl ? 'pointer' : 'default' }}
               >
                 <div className={`notification-icon ${notification.type}`}>
                   {notification.icon}
@@ -170,11 +179,11 @@ function Notifications() {
                   <p className="notification-message">{notification.message}</p>
                 </div>
                 
-                <div className="notification-actions">
+                <div className="notification-actions" onClick={(e) => e.stopPropagation()}>
                   {!notification.read && (
                     <button 
                       className="mark-read-btn"
-                      onClick={() => markAsRead(notification.id)}
+                      onClick={() => handleMarkAsRead(notification.id)}
                       title="Mark as read"
                     >
                       <FaCheck />
@@ -182,7 +191,7 @@ function Notifications() {
                   )}
                   <button 
                     className="delete-btn"
-                    onClick={() => deleteNotification(notification.id)}
+                    onClick={() => handleDeleteNotification(notification.id)}
                     title="Delete notification"
                   >
                     <FaTrash />

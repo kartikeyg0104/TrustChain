@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { FaHeart, FaRegHeart, FaShare, FaExternalLinkAlt } from 'react-icons/fa';
 import { featuredProperties } from '../data/properties';
+import { addNotification } from '../data/notifications';
 import '../Styles/Property_Detail.css';
 
 function Property_Detail() {
   const { id } = useParams();
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSaved, setIsSaved] = useState(false);
   
   useEffect(() => {
     // In a real app, you'd fetch from API using the ID
@@ -15,9 +18,75 @@ function Property_Detail() {
     
     if (propertyData) {
       setProperty(propertyData);
+      
+      // Generate notification for property view
+      addNotification('property_viewed', {
+        propertyTitle: propertyData.title,
+        propertyId: propertyData.id
+      });
     }
     setLoading(false);
   }, [id]);
+
+  const handleSaveProperty = () => {
+    setIsSaved(!isSaved);
+    
+    if (!isSaved) {
+      // Generate notification for saving property
+      addNotification('property_liked', {
+        propertyTitle: property.title,
+        propertyId: property.id
+      });
+    }
+  };
+
+  const handleShareProperty = async () => {
+    const shareData = {
+      title: property.title,
+      text: `Check out this property: ${property.title} - ${property.price}`,
+      url: window.location.href
+    };
+
+    try {
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: Copy to clipboard
+        await navigator.clipboard.writeText(window.location.href);
+        alert('Property link copied to clipboard!');
+      }
+    } catch (error) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = window.location.href;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('Property link copied to clipboard!');
+    }
+  };
+
+  const handleContactAgent = () => {
+    // Generate notification for contacting agent
+    addNotification('agent_contacted', {
+      agentName: 'Michael Rodriguez',
+      agentId: 'agent-mr'
+    });
+    
+    // Open email client
+    const subject = `Inquiry about ${property.title}`;
+    const body = `Hello Michael,\n\nI'm interested in the property: ${property.title}\nLocation: ${property.location}\nPrice: ${property.price}\n\nI would like to schedule a viewing and get more information.\n\nBest regards`;
+    const agentEmail = 'michael.rodriguez@propconnect.com';
+    const mailtoLink = `mailto:${agentEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    try {
+      window.location.href = mailtoLink;
+    } catch (error) {
+      alert(`Contact the agent at: ${agentEmail}`);
+    }
+  };
 
   if (loading) {
     return <div className="loading-container">Loading property details...</div>;
@@ -48,8 +117,20 @@ function Property_Detail() {
           <div className="property-price-container">
             <h2 className="property-price">{property.price}</h2>
             <div className="property-actions">
-              <button className="action-button favorite"><span>❤</span> Save</button>
-              <button className="action-button share"><span>↗</span> Share</button>
+              <button 
+                className={`action-button favorite ${isSaved ? 'saved' : ''}`}
+                onClick={handleSaveProperty}
+              >
+                {isSaved ? <FaHeart /> : <FaRegHeart />}
+                {isSaved ? 'Saved' : 'Save'}
+              </button>
+              <button 
+                className="action-button share"
+                onClick={handleShareProperty}
+              >
+                <FaShare />
+                Share
+              </button>
             </div>
           </div>
         </div>
@@ -120,7 +201,13 @@ function Property_Detail() {
                   <p>PropConnect Realty</p>
                 </div>
               </div>
-              <button className="contact-button primary">Message</button>
+              <button 
+                className="contact-button primary"
+                onClick={handleContactAgent}
+                title="Contact agent about this property"
+              >
+                Message
+              </button>
             </div>
           </div>
         </div>
