@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './Page/Home';
 import About from './Page/About';
 import Contact from './Page/Contact';
@@ -11,16 +11,25 @@ import Notifications from './Page/Notifications';
 import Navbar from './Page/Navbar';
 import Footer from './Page/Footer'; // Make sure this import uses the new Footer
 import ScrollToTop from './Page/ScrollToTop';
+import SignUp from './Page/SignUp';
+import Login from './Page/Login';
+import Profile from './Page/Profile';
 import './App.css';
 
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isAuthPage = location.pathname === '/' || location.pathname === '/signup';
+
   return (
-    <Router>
+    <>
       <ScrollToTop />
-      <Navbar />
+      {!isAuthPage && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path ="/" element={<Login />}/>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/properties" element={<PropertyListing />} />
@@ -30,7 +39,15 @@ function App() {
         <Route path="/agents/:id" element={<AgentProfile />} /> 
         <Route path="/notifications" element={<Notifications />} />
       </Routes>
-      <Footer />
+      {!isAuthPage && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }

@@ -48,7 +48,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/" className="logo">
+        <Link to="/home" className="logo">
           <div className="logo-icon">TC</div>
           <span className="logo-text">TrustChain</span>
         </Link>
@@ -56,9 +56,9 @@ function Navbar() {
         <div className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
           <ul className="nav-links">
             <li>
-              <Link to="/" className={isActive('/') ? 'active' : ''}>
+              <Link to="/home" className={isActive('/home') ? 'active' : ''}>
                 Home
-                {isActive('/') && <span className="nav-indicator"></span>}
+                {isActive('/home') && <span className="nav-indicator"></span>}
               </Link>
             </li>
             <li>
@@ -99,8 +99,10 @@ function Navbar() {
           </div>
           
           <div className="auth-buttons">
-            <button className="sign-in">Sign In</button>
-            <button className="sign-up">Sign Up</button>
+            <Link to="/profile" className="profile-link">
+              <FaUserCircle className="profile-icon" />
+              Profile
+            </Link>
           </div>
         </div>
         

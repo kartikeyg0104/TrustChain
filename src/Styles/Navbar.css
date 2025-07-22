@@ -172,43 +172,7 @@
   align-items: center;
 }
 
-.sign-in {
-  background: none;
-  border: 1px solid #e2e8f0;
-  padding: 10px 20px;
-  border-radius: 30px;
-  color: #1a2b50;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.sign-in::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: rgba(203, 213, 224, 0.15);
-  transition: all 0.3s ease;
-  z-index: -1;
-}
-
-.sign-in:hover::before {
-  width: 100%;
-}
-
-.sign-in:hover {
-  border-color: #cbd5e0;
-  transform: translateY(-2px);
-}
-
-.sign-up {
+.profile-link {
   background: linear-gradient(135deg, #1a2b50 0%, #2c5282 100%);
   color: white;
   border: none;
@@ -222,9 +186,13 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.sign-up::before {
+.profile-link::before {
   content: '';
   position: absolute;
   top: 0;
@@ -237,18 +205,24 @@
   z-index: -1;
 }
 
-.sign-up:hover::before {
+.profile-link:hover::before {
   left: 100%;
 }
 
-.sign-up:hover {
+.profile-link:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(26, 43, 80, 0.35);
+  color: white;
+  text-decoration: none;
 }
 
-.sign-up:active {
+.profile-link:active {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(26, 43, 80, 0.3);
+}
+
+.profile-icon {
+  font-size: 1.1rem;
 }
 
 .hamburger {
