@@ -60,7 +60,7 @@ const Profile = () => {
 
   const handleSave = () => {
     // Here you would typically save to Firebase or your backend
-    console.log('Saving profile data:', profileData);
+    // TODO: Implement actual save functionality
     setEditing(false);
   };
 
